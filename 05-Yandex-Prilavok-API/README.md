@@ -37,7 +37,11 @@
 
 ## Материалы проекта
 
-- [Сводка покрытия по функциональности](./Improved/Coverage-Summary.csv)
+- [Чек-лист API — CSV-превью](./Improved/API-Checklist-Preview.csv)
+- [Чек-лист API — полные данные](./Improved/API-Checklist.csv)
+- [Баг-репорты — CSV-превью](./Improved/Bug-Reports-Preview.csv)
+- [Баг-репорты — полные данные](./Improved/Bug-Reports.csv)
 - [Анализ тестирования и замечания к исходным данным](./Documentation/API-Test-Analysis.md)
 - [Отчёт о тестировании](./Documentation/Test-Report.md)
 - [Тестовое окружение](./Documentation/Test-Environment.md)
+- [Требования к бэкенду](./Originals/Documentation/Backend-Requirements-Extract.md)

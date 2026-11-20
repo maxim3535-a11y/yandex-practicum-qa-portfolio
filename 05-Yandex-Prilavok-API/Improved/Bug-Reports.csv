@@ -1,0 +1,754 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: Bug-Reports.csv>
+index,ID,Название БР,Приоритет,Статус,Предусловия,Шаги воспроизведения,Ожидаемый результат,Фактический результат,Окружение
+0,BUG1,"В функционале добавления продуктов в набор, в ходе отправки POST /api/v1/kits/id/products  при передаче пустого массива productList не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос:
+метод POST
+параметры ""productsList"": [ ]
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+1,BUG2,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при передаче несуществующего ID Продукта не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос:  метод POST
+параметры  ""productsList"": [ { ""id"": 130, ""quantity"": 1 } ],  ""id"": 130, ""quantity"": 1
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 130, ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+2,BUG3,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при передаче ID Продукта NULL не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры  ""productsList"": [ { ""id"": null, ""quantity"": 1 } ], ""id"": null, ""quantity"": 1
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": null, ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+3,BUG4,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при непередаче ID Продукта не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры ""productsList"": [ {  ""quantity"": 1 } ], ""quantity"": 1 
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ {  ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+4,BUG5,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при передаче ID Продукта ""2""(строка) не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры ""productsList"": [ { ""id"": ""2"", ""quantity"": 1 } ], ""id"": ""2"", ""quantity"": 1
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": ""2"", ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+5,BUG6,"В функционале добавления продуктов в набор,  в ходе отправки POST /api/v1/kits/id/products  при передаче количества продукта -1(отрицательное значение) не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры  ""productsList"": [ { ""id"": 2, ""quantity"": -1 } ], ""id"": 2, ""quantity"": -1
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 2, ""quantity"": -1 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+6,BUG7,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при передаче количества продукта 0 не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры  ""productsList"": [ { ""id"": 2, ""quantity"": 0 } ],  ""id"": 2, ""quantity"": 0
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 2, ""quantity"": 0 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+7,BUG8,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при передаче количества продукта ""5""(строка) появляется ошибка 500
+Internal Server Error",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры  ""productsList"": [ { ""id"": 2, ""quantity"": ""5"" } ] ""id"": 2, ""quantity"": ""5"" 
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 2, ""quantity"": ""5"" } ] }",Код и статус ответа 400 Bad Request,"Код и статус ответа 500
+Internal Server Error
+
+""message"": ""invalid input syntax for integer: \""9-15\""""","адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+8,BUG9,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при передаче количества продукта NULL не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры ""productsList"": [ { ""id"": 2, ""quantity"": null } ] ""id"": 2, ""quantity"": null
+3апрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 2, ""quantity"": null } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+9,BUG10,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products  при передаче списка обьектов без массива не появляется ошибка 400 Bad Request  . Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры ""id"": 2, ""quantity"": 1
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY {  ""id"": 2, ""quantity"": 1  }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+10,BUG11,"В функционале добавления продуктов в набор в ходе отправки  POST /api/v1/kits/id/products , при непередаче количества продукта появляется ошибка 500
+Internal Server Error",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры ""productsList"":  [ { ""id"": 2 } ] , ""id"": 2 
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 2 } ] }",Код и статус ответа 400 Bad Request,"Код и статус ответа 500
+Internal Server Error
+
+""message"": ""invalid input syntax for integer: \""NaN\""""","адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+11,BUG12,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки  POST /fast-delivery/v3.1.1/calculate-delivery.xml  при передаче времени доставки NULL не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+deliveryTime - null,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>null</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+12,BUG13,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче времени доставки вне диапазона работы доставки (22,6,4) неполная структура ответа, невозвращается необходимая иинформация",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+deliveryTime - 22,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>22</deliveryTime>
+</InputModel>","Код и статус ответа 200 ОК,
+Ответ BODY 
+<response name=""Привезём быстро"" isItPossibleToDeliver=""false"" hostDeliveryCost=""23"" clientDeliveryCost=""0"">
+    <toBeDeliveredTime>
+        <min>25</min>
+        <max>30</max>
+    </toBeDeliveredTime>
+</response>","Код и статус ответа 200 ОК,
+Ответ BODY 
+<response name=""Привезём быстро""/>","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+13,BUG14,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки  POST /fast-delivery/v3.1.1/calculate-delivery.xml     при передаче времени доставки ""7""(строка) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+deliveryTime - ""7"",
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>""7""</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+14,BUG15,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при непередаче времени доставки появляется ошибка 500
+Internal Server Error",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    
+</InputModel>",Код и статус ответа 400 Bad Request,"Код и статус ответа 500
+Internal Server Error
+
+""message"": ""Cannot read property '0' of undefined""","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+15,BUG16,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче пустого параметра времени доставки не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+deliveryTime - ,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime></deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+16,BUG17,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при передаче времени доставки -5(отрицательное) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+deliveryTime - -5,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>-5</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+17,BUG18,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при передаче времени доставки !(спецсимвол) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+deliveryTime - !,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>!</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+18,BUG19,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при передаче времени доставки 27 не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 5,
+productsWeight - 2,
+deliveryTime - 25,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>27</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+19,BUG20,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче количества товаров 0 не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - 0,
+productsWeight - 2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>0</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+20,BUG21,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при передаче количества товаров NULL не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - null,
+productsWeight - 2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>null</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+21,BUG22,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при передаче количества товаров ""7""(строка) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - ""7"",
+productsWeight - 2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>""7""</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+22,BUG23,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при непередаче параметра количества товаров появляется ошибка 500
+Internal Server Error",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsWeight - 2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    
+    <productsWeight>2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,"Код и статус ответа 500
+Internal Server Error
+
+""message"": ""Cannot read property '0' of undefined""","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+23,BUG24,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при передаче пустого параметра количества товаров не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - ,
+productsWeight - 2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount></productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+24,BUG25,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml  при передаче количества товаров -5(отрицательное) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -  -5,
+productsWeight - 2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>-5</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+25,BUG26,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки  POST /fast-delivery/v3.1.1/calculate-delivery.xml     при передаче количества товаров !(спецсимвол) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount - !,
+productsWeight - 2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>!</productsCount>
+    <productsWeight>2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+26,BUG27,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче веса заказа 0 не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -5,
+productsWeight - 0,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>0</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+27,BUG28,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки  POST /fast-delivery/v3.1.1/calculate-delivery.xml     при передаче веса заказа null не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -5,
+productsWeight - null,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>null</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+28,BUG29,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки  POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче веса заказа ""4""(строка) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -5,
+productsWeight - ""4"",
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>""4""</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+29,BUG30,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче пустого параметра веса заказа не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -5,
+productsWeight - ,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight></productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+30,BUG31,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при непередаче параметра веса заказа появляется ошибка  500
+Internal Server Error",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -5,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,"Код и статус ответа 500
+Internal Server Error
+
+""message"": ""Cannot read property '0' of undefined""","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+31,BUG32,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml   при передаче веса заказа ""-2""(отрицательное) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -5,
+productsWeight -  -2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>-2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+32,BUG33,"В функционале проверки доставки курьерской службой «Привезём быстро»,  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче веса заказа ""!""(спецсимвол) не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount -5,
+productsWeight -  !,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount>5</productsCount>
+    <productsWeight>-!</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+33,BUG34,"В функционале удаления корзины  в ходе отправки DELETE {{server_url}}/api/v1/orders/id Корзина не удаляется, при вводе валидных данных. Код и статус ответа 404 Not Found",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод DELETE
+DELETE {{server_url}}/api/v1/orders/4
+где 4 - это id созданной ранее корзины","Код и статус ответа 200 ОК
+{
+       ""ok"": true
+   }","Код и статус ответа 404 Not Found
+{
+    ""code"": 404,
+    ""message"": ""Корзина с id=4 не найдена""
+}","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+34,BUG35,"В функционале добавления продуктов в корзину, в ходе отправки   PUT /api/v1/orders/id  при передаче валидных данных структура ответа не совпадает с  таковой из  Документации API. Другой порядок параметров",Желательный,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"": 3, ""quantity"": 1 } ],
+""id"": 3,
+""quantity"": 1,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 3, ""quantity"": 1 } ] }","Код и статус ответа 200 ОК
+
+{
+""productsList"": [
+    {
+            ""id"": 1,
+            ""quantity"": 2
+        },
+        {
+            ""id"": 3,
+            ""quantity"": 1
+        }
+],
+        ""status"": 0,
+        ""deliveryPriceOur"": 30,
+        ""deliveryTime"": ""25~30"",
+        ""courierService"": ""Привезём быстро"",
+        ""deliveryPrice"": 0,
+        ""wareHouse"": ""Шведский дом"",
+        ""userId"": 1,
+        ""id"": 4,
+        ""productsCost"": 407,
+        ""finalCCost"": 407
+    }","Код и статус ответа 200 ОК
+
+{
+    ""id"": 4,
+    ""userId"": null,
+    ""deliveryPrice"": 0,
+    ""deliveryPriceOur"": 30,
+    ""deliveryTime"": ""25~30"",
+    ""wareHouse"": ""Шведский дом"",
+    ""courierService"": ""Привезём быстро"",
+    ""status"": 0,
+    ""productsList"": [
+        {
+            ""id"": 1,
+            ""quantity"": 2
+        },
+        {
+            ""id"": 3,
+            ""quantity"": 1
+        }
+    ],
+    ""productsCost"": 407,
+    ""finalCost"": 407
+}","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+35,BUG36,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id  при передаче  пустого массива productList не возникает ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: методPUT
+параметры  productsList -[ ],
+
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [  ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+36,BUG37,"В функционале добавления продуктов в корзину, в ходе отправки     PUT /api/v1/orders/id  при передаче несуществующего ID товара не возникает ошибка 400 Bad Request. Статус ответа 409
+Conflict",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"": 150, ""quantity"": 1 } ],
+""id"": 150,
+""quantity"": 1,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 150, ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,"Код и статус ответа 409
+Conflict
+{
+    ""code"": 409,
+    ""message"": ""Нет склада, способного обработать Ваш заказ""
+}","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+37,BUG38,"В функционале добавления продуктов в корзину, в ходе отправки   PUT /api/v1/orders/id    при передаче  ID товара NULL не возникает ошибка 400 Bad Request. Статус ответа 409
+Conflict",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"": null, ""quantity"": 1 } ],
+""id"":null,
+""quantity"": 1,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": null, ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,"Код и статус ответа 409
+Conflict
+{
+    ""code"": 409,
+    ""message"": ""Нет склада, способного обработать Ваш заказ""
+}","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+38,BUG39,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id  при непередаче параметра  ID товара не возникает ошибка 400 Bad Request. Статус ответа 409
+Conflict",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""quantity"": 1 } ],
+
+""quantity"": 1,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ {  ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,"Код и статус ответа 409
+Conflict
+{
+    ""code"": 409,
+    ""message"": ""Нет склада, способного обработать Ваш заказ""
+}","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+39,BUG40,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id  при передаче  ID товара ""2""(строка) не возникает ошибка 400 Bad Request. Статус ответа 409
+Conflict",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"":""2"", ""quantity"": 1 } ],
+""id"":""2"",
+""quantity"": 1,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": ""2"", ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,"Код и статус ответа 409
+Conflict
+{
+    ""code"": 409,
+    ""message"": ""Нет склада, способного обработать Ваш заказ""
+}","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+40,BUG41,"В функционале добавления продуктов в корзину, в ходе отправки    PUT /api/v1/orders/id   при передаче  количества продукта -1(отрицательное значение) не возникает ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"":-10, ""quantity"": -1 } ],
+""id"":10,
+""quantity"": -1,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 10, ""quantity"": -1 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+41,BUG42,"В функционале добавления продуктов в корзину, в ходе отправки    PUT /api/v1/orders/id   при передаче  количества продукта 0 не возникает ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"":-10, ""quantity"": 0 } ],
+""id"":10,
+""quantity"": 0,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 10, ""quantity"": 0 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+42,BUG43,"В функционале добавления продуктов в корзину, в ходе отправки   PUT /api/v1/orders/id    при передаче  количества продукта ""5""(строка) не возникает ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"":-10, ""quantity"": ""5"" } ],
+""id"":10,
+""quantity"": ""5"",
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 10, ""quantity"": ""5"" } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+43,BUG44,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id  при передаче  количества продукта null не возникает ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"":-10, ""quantity"": null } ],
+""id"":10,
+""quantity"": null,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 10, ""quantity"": null } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+44,BUG45,"В функционале добавления продуктов в корзину, в ходе отправки     PUT /api/v1/orders/id  при непередаче параметра количества продукта не возникает ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"":-10 } ],
+""id"":10,
+
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 10 } ] }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+45,BUG46,"В функционале добавления продуктов в набор, в ходе отправки  POST /api/v1/kits/id/products    при непередаче массива productList не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос:
+метод POST
+параметры id"": 1,    
+""quantity"": 10
+Запрос
+POST {{server_url}}/api/v1/kits/7/products",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+46,BUG47,"В функционале добавления продуктов в набор,  в ходе отправки   POST /api/v1/kits/id/products  при передаче массива productList другим типом данных не появляется ошибка 400 Bad Request. Статус ответа 500
+Internal Server Error",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос:
+метод POST
+""productsList"": {    ""id"": 1,            ""quantity"": 10   }
+параметры id"": 1,    
+""quantity"": 10
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": {    ""id"": 1,            ""quantity"": 10   } }",Код и статус ответа 400 Bad Request,"500
+Internal Server Error","адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+47,BUG48,"В функционале добавления продуктов в набор, в ходе отправки   POST /api/v1/kits/id/products  при передаче ID Продукта 21474836478 не появляется ошибка 400 Bad Request  Статус ответа 500
+Internal Server Error",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры  ""productsList"": [ { ""id"": 21474836478, ""quantity"": 1 } ], ""id"": 21474836478, ""quantity"": 1
+Запрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 21474836478, ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,"500
+Internal Server Error","адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+48,BUG49,"В функционале добавления продуктов в набор,  в ходе отправки   POST /api/v1/kits/id/products  при передаче количества продукта 21474836478 не появляется ошибка 400 Bad Request  . Статус ответа 500
+Internal Server Error",Критический,Открыт,"1. создать пустой набор.
+URL {{server_url}}/api/v1/kits 
+BODY {    ""cardId"": 1,     ""name"": ""Для Практикума""}   id созданного набора - 7 
+2. добавить в него продукт
+POST {{server_url}}/api/v1/kits/7/products
+BODY {    ""productsList"": [        {            ""id"": 1,            ""quantity"": 1        }            ]}","Отправить запрос: метод POST
+параметры ""productsList"": [ { ""id"": 2, ""quantity"": 21474836478 } ] ""id"": 2, ""quantity"": 21474836478
+3апрос
+POST {{server_url}}/api/v1/kits/7/products
+BODY { ""productsList"": [ { ""id"": 2, ""quantity"": 21474836478} ] }",Код и статус ответа 400 Bad Request,"500
+Internal Server Error","адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+49,BUG50,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id  при передаче  ID товара 21474836478 не возникает ошибка 400 Bad Request. Статус ответа 500
+Internal Server Error",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"": 21474836478, ""quantity"": 1 } ],
+""id"":21474836478,
+""quantity"": 1,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 21474836478, ""quantity"": 1 } ] }",Код и статус ответа 400 Bad Request,"500
+Internal Server Error","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+50,BUG51,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id при передаче массива producstList другим типом данных не появляется ошибка 400 Bad Request. Статус ответа 500
+Internal Server Error",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList - { ""id"":1, ""quantity"":3},
+""id"":1,
+""quantity"": 3,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"":  { ""id"": 1, ""quantity"": 3 }  }",Код и статус ответа 400 Bad Request,"500
+Internal Server Error","адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+51,BUG52,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id  при непередаче данных без массива, не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  
+""id"":1,
+""quantity"": 3,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{  ""id"": 1, ""quantity"": 3 }",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+52,BUG53,"В функционале добавления продуктов в корзину,  в ходе отправки    PUT /api/v1/orders/id  при непередаче массива, не появляется ошибка 400 Bad Request. Статус ответа 200 ОК",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод POST
+Запрос
+PUT {{{server_url}}/api/v1/orders/4",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+ https://{id}.serverhub.praktikum-services.ru/"
+53,BUG54,"В функционале добавления продуктов в корзину, в ходе отправки    PUT /api/v1/orders/id   при передаче  количества продукта 21474836478 не возникает ошибка 400 Bad Request. Статус ответа 409
+Conflict",Критический,Открыт,"1. Создать корзину
+POST {{server_url}}/api/v1/orders
+BODY { ""productsList"": [ { ""id"": 1, ""quantity"": 2 } ] }","Отправить запрос: метод PUT
+параметры  productsList -[ { ""id"":-10, ""quantity"": 21474836478 } ],
+""id"":10,
+""quantity"": 21474836478,
+Запрос
+PUT {{{server_url}}/api/v1/orders/4
+BODY{ ""productsList"": [ { ""id"": 10, ""quantity"":21474836478 } ] }",Код и статус ответа 400 Bad Request,"Код и статус ответа 409
+Conflict
+{
+    ""code"": 409,
+    ""message"": ""Нет склада, способного обработать Ваш заказ""
+}","адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+54,BUG55,В функционале проверки доставки курьерской службой «Привезём быстро»  в ходе отправки   POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче количества товара  21474836478 не появляется ошибка 400 Bad Request. Статус ответа 200 ОК,Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount  21474836478,
+productsWeight -  2,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount> 21474836478</productsCount>
+    <productsWeight>-2</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+55,BUG56,В функционале проверки доставки курьерской службой «Привезём быстро» в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче веса заказа  21474836478 не появляется ошибка 400 Bad Request. Статус ответа 200 ОК,Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount  5,
+productsWeight -  21474836478,
+deliveryTime - 13,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount> 5</productsCount>
+    <productsWeight>-21474836478</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
+56,BUG57,В функционале проверки доставки курьерской службой «Привезём быстро» в ходе отправки    POST /fast-delivery/v3.1.1/calculate-delivery.xml    при передаче времени доставки 21474836478 не появляется ошибка 400 Bad Request. Статус ответа 200 ОК,Критический,Открыт,,"Отправить запрос: метод POST
+параметры  productsCount  5,
+productsWeight -  2,
+deliveryTime - 21474836478,
+Запрос
+POST {{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml
+BODY<InputModel>
+    <productsCount> 5</productsCount>
+    <productsWeight>-2</productsWeight>
+    <deliveryTime>21474836478</deliveryTime>
+</InputModel>",Код и статус ответа 400 Bad Request,Код и статус ответа 200 ОК,"адрес стенда 
+https://{id}.serverhub.praktikum-services.ru/"
