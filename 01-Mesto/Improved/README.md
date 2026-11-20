@@ -1,9 +1,13 @@
 # Improved workbooks
 
-These files are reorganized copies of the submitted Mesto QA training materials. The worksheets use consistent headers and a clearer tabular layout for easier review.
+The reorganized Excel files are the primary portfolio artifacts. GitHub's web file viewer does not render .xlsx workbooks as interactive tables: use the Excel links to download them and open them in Excel or Google Sheets.
 
-- Test cases: profile-editing regression suite (17 cases)
-- Bug reports: 10 recorded defects
-- Retest results: 15 retest records
+For a quick browser preview, use the CSV exports below. They preserve table values and text, but not Excel formatting or workbook-level features.
 
-The recorded statuses and conclusions are retained from the submitted materials. Refer to the project [README](../README.md) for scope and result details.
+| Artifact | Excel workbook | Browser preview |
+|---|---|---|
+| Profile regression test cases | [Mesto-Test-Cases-IMPROVED.xlsx](./Mesto-Test-Cases-IMPROVED.xlsx) | [CSV preview](./CSV-Preview/Mesto-Test-Cases-IMPROVED-DATA.csv) |
+| Bug reports | [Mesto-Bug-Reports-IMPROVED.xlsx](./Mesto-Bug-Reports-IMPROVED.xlsx) | [CSV preview](./CSV-Preview/Mesto-Bug-Reports-IMPROVED-DATA.csv) |
+| Retest results | [Mesto-Retest-Results-IMPROVED.xlsx](./Mesto-Retest-Results-IMPROVED.xlsx) | [CSV preview](./CSV-Preview/Mesto-Retest-Results-IMPROVED-DATA.csv) |
+
+The recorded test outcomes, defect statuses, and retest conclusions are retained from the submitted materials.
