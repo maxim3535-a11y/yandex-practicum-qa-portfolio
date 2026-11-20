@@ -63,7 +63,7 @@ These figures reflect the statuses recorded in the supplied workbooks. They are 
 
 | Folder | Contents |
 |---|---|
-| [Originals](./Originals/) | Notes about the separately retained submitted source workbooks |
+| [Originals](./Originals/) | CSV exports of the original training worksheets; values and source text are retained, Excel formatting is not |
 | [Improved](./Improved/) | Reorganized Excel workbooks with consistent column names and a more readable tabular structure |
 | [Documentation](./Documentation/) | Test-environment notes and scope details |
 
@@ -75,7 +75,7 @@ The improved retest workbook separates the originally recorded observed result f
 - [Bug reports](./Improved/Mesto-Bug-Reports-IMPROVED.xlsx)
 - [Retest results](./Improved/Mesto-Retest-Results-IMPROVED.xlsx)
 
-The original source workbooks are retained separately and are not included in this repository at this stage. The files published here are the reorganized versions prepared for portfolio review.
+The original worksheets are also available as CSV data exports in [Originals/CSV-Exports](./Originals/CSV-Exports/). CSV preserves worksheet cell values and text, but not Excel formatting, formulas, charts, or workbook-level features. The improved `.xlsx` files above are the review-ready Excel versions prepared for this portfolio.
 
 The spreadsheets are in Russian because the original training assignment and source materials were in Russian. This project overview is in English.
 
