@@ -67,7 +67,7 @@ These figures reflect the statuses recorded in the supplied workbooks. They are 
 | [Improved](./Improved/) | Reorganized Excel workbooks with consistent column names and a more readable tabular structure |
 | [Documentation](./Documentation/) | Test-environment notes and scope details |
 
-The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion. The improved bug-report workbook also preserves source-workbook screenshot references for ID_2, ID_3, ID_5, and ID_8. The screenshot image files themselves were not included in the supplied materials.
+The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion. The updated bug-report CSV preview preserves the screenshot filename references from the source workbook for ID_2, ID_3, ID_5, and ID_8. The screenshot image files themselves were not included in the supplied materials.
 
 ### Improved workbooks and browser previews
 
