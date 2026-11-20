@@ -11,12 +11,14 @@ I have 8 years of previous IT experience in system administration and technical 
 | # | Project | Scope | Documentation |
 |---|---|---|---|
 | 01 | **Mesto Web Application** | Profile regression suite and profile bug reports; separate retest log also covers gallery features | [Open project](./01-Mesto/README.md) |
+| 02 | **Yandex Routes** | Field validation, equivalence classes and boundary values, 60 test cases, private-car time/cost calculation, 16 bug reports | [Open project](./02-Yandex-Routes/README.md) |
 
 ## Skills represented
 
 - Manual and functional testing
+- Requirements analysis and test design
+- Equivalence partitioning and boundary value analysis
 - Regression testing and test execution
-- Test case design and documentation
 - Bug reporting: steps to reproduce, expected and actual results, severity and priority
 - Retesting and defect lifecycle
 - Web application testing
@@ -26,11 +28,13 @@ I have 8 years of previous IT experience in system administration and technical 
 ```text
 yandex-practicum-qa-portfolio/
 ├── README.md
-└── 01-Mesto/
+├── 01-Mesto/
+└── 02-Yandex-Routes/
     ├── README.md
     ├── Documentation/
     ├── Originals/
     └── Improved/
+        └── CSV-Preview/
 ```
 
 More projects will be added as their documentation is prepared.
