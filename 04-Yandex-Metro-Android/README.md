@@ -58,7 +58,7 @@
 
 ## Документация
 
-- [Отчёт о тестировании](./Documentation/Test-Report.docx)
+- [Отчёт о тестировании](./Documentation/Test-Report.md)
 - [Тестовое окружение](./Documentation/Test-Environment.md)
 - [Итоги тестирования](./Documentation/Test-Summary.md)
 - [Требования к Яндекс Метро](https://code.s3.yandex.net/qa/files/Yandex_metro.pdf)
