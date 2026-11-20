@@ -55,9 +55,13 @@
 - [Материалы и структура файлов](./Improved/README.md)
 - [Исходные материалы](./Originals/README.md)
 
-## Сводные таблицы
-- [Результаты тестирования](./Improved/Test-Results-Summary.csv)
+## CSV-таблицы, доступные в репозитории
+- [Сводные результаты тестирования](./Improved/Test-Results-Summary.csv)
 - [Распределение баг-репортов](./Improved/Bug-Report-Distribution.csv)
+- [Дефекты Web вне тестовой документации](./Improved/03-Web-Outside-Documentation-Bugs.csv)
+- [Чек-лист API](./Improved/05-API-Checklist.csv)
+
+Полный комплект CSV-экспортов остальных тестовых таблиц подготовлен в архиве артефактов, но пока не перенесён в репозиторий.
 
 ## Источники требований
 - [Требования к веб-приложению](https://code.s3.yandex.net/qa/files/requirements_web_app_1.1.pdf)
