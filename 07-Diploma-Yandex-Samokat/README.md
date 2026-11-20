@@ -49,15 +49,17 @@
 Приоритеты исходного реестра: 63 критических, 19 желательных, 16 стандартных и 5 блокирующих. Все 31 API-дефект имеют критический приоритет.
 
 ## Документация
-
 - [Отчёт о тестировании](./Documentation/Test-Report.md)
 - [Тестовое окружение](./Documentation/Test-Environment.md)
 - [Объём и анализ требований](./Documentation/Requirements-Scope.md)
 - [Материалы и структура файлов](./Improved/README.md)
 - [Исходные материалы](./Originals/README.md)
 
-## Источники требований
+## Сводные таблицы
+- [Результаты тестирования](./Improved/Test-Results-Summary.csv)
+- [Распределение баг-репортов](./Improved/Bug-Report-Distribution.csv)
 
+## Источники требований
 - [Требования к веб-приложению](https://code.s3.yandex.net/qa/files/requirements_web_app_1.1.pdf)
 - [Требования к мобильному приложению](https://code.s3.yandex.net/qa/files/requirements_mob_app.pdf)
 - [Требования к бэкенду](https://code.s3.yandex.net/qa/files/requirements_backend.pdf)
