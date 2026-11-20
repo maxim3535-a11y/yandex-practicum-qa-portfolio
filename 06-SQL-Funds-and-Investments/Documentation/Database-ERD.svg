@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1465" height="1024" viewBox="0 0 1465 1024">
+<rect width="1465" height="1024" fill="#fff"/>
+<style>
+.table-name{font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:700;fill:#00b34a}
+.field{font-family:Arial,Helvetica,sans-serif;font-size:20px;fill:#222}
+.key{font-family:Arial,Helvetica,sans-serif;font-size:18px;fill:#222}
+.box{fill:#fff;stroke:#222;stroke-width:2;rx:8;ry:8}
+.rule{stroke:#222;stroke-width:1}
+.green-rule{stroke:#00b34a;stroke-width:2}
+</style>
+<polyline points="383,144.5 423,144.5 423,158.5 468,158.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoinn="round"/>
+<polyline points="456,151.5 468,158.5 456,165.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin-linejoin="round"/>
+<polyline points="383,175.5 403,175.5 403,171.5 468,171.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="456,164.5 468,171.5 456,178.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin-linejoin" stroke-linejoin="round"/>
+<polyline points="355,843.5 435,843.5 435,164.5 468,164.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing="round"/>
+<polyline points="456,157.5 468,164.5 456,171.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="105,480.5 61,480.5 61,750.5 105,750.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing"/>
+<polyline points="93,743.5 105,750.5 93,757.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="796,493.5 752,493.5 752,167.5 723,167.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing="round"/>
+<polyline points="735,160.5 723,167.5 735,174.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin-linejoin" stroke-linejoin="round"/>
+<polyline points="796,216.5 754,216.5 754,462.5 796,462.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing="round"/>
+<polyline points="784,455.5 796,462.5 784,469.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="796,247.5 742,247.5 742,164.5 723,164.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="735,157.5 723,164.5 735,171.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1036,278.5 1115,283.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1103,276.5 1115,283.5 1103,290.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin" line-join="round"/>
+<rect class="box" x="105" y="60" width="278" height="286"/>
+<line class="green-rule" x1="105" y1="98" x2="383" y2="98"/>
+<text class="table-name" x="244.0" y="86" text-anchor="middle">acquisition</text>
+<line class="rule" x1="155" y1="98" x2="155" y2="346"/>
+<line class="rule" x1="105" y1="129" x2="383" y2="129"/>
+<text class="key" x="119" y="120.5">PK</text>
+<text class="field" x="166" y="120.5">id</text>
+<text class="key" x="119" y="151.5">FK</text>
+<text class="field" x="166" y="151.5">acquiring_company_id</text>
+<text class="key" x="119" y="182.5">FK</text>
+<text class="field" x="166" y="182.5">acquired_company_id</text>
+<text class="field" x="166" y="213.5">term_code</text>
+<text class="field" x="166" y="244.5">price_amount</text>
+<text class="field" x="166" y="275.5">acquired_at</text>
+<text class="field" x="166" y="306.5">created_at</text>
+<text class="field" x="166" y="337.5">updated_at</text>
+<rect class="box" x="468" y="111" width="255" height="503"/>
+<line class="green-rule" x1="468" y1="149" x2="723" y2="149"/>
+<text class="table-name" x="595.5" y="137" text-anchor="middle">company</text>
+<line class="rule" x1="518" y1="149" x2="518" y2="614"/>
+<line class="rule" x1="468" y1="180" x2="723" y2="180"/>
+<text class="key" x="482" y="171.5">PK</text>
+<text class="field" x="529" y="171.5">id</text>
+<text class="field" x="529" y="202.5">name</text>
+<text class="field" x="529" y="233.5">category_code</text>
+<text class="field" x="529" y="264.5">status</text>
+<text class="field" x="529" y="295.5">founded_at</text>
+<text class="field" x="529" y="326.5">closed_at</text>
+<text class="field" x="529" y="357.5">domain</text>
+<text class="field" x="529" y="388.5">network_username</text>
+<text class="field" x="529" y="419.5">country_code</text>
+<text class="field" x="529" y="450.5">investment_rounds</text>
+<text class="field" x="529" y="481.5">funding_rounds</text>
+<text class="field" x="529" y="512.5">funding_total</text>
+<text class="field" x="529" y="543.5">milestones</text>
+<text class="field" x="529" y="574.5">created_at</text>
+<text class="field" x="529" y="605.5">updated_at</text>
+<rect class="box" x="105" y="396" width="205" height="255"/>
+<line class="green-rule" x1="105" y1="434" x2="310" y2="434"/>
+<text class="table-name" x="207.5" y="422" text-anchor="middle">education</text>
+<line class="rule" x1="155" y1="434" x2="155" y2="651"/>
+<line class="rule" x1="105" y1="465" x2="310" y2="465"/>
+<text class="key" x="119" y="456.5">PK</text>
+<text class="field" x="166" y="456.5">id</text>
+<text class="key" x="119" y="487.5">FK</text>
+<text class="field" x="166" y="487.5">person_id</text>
+<text class="key" x="119" y="518.5">FK</text>
+<text class="field" x="166" y="518.5">degree_type</text>
+<text class="field" x="166" y="549.5">institution</text>
+<text class="field" x="166" y="580.5">graduated_at</text>
+<text class="field" x="166" y="611.5">created_at</text>
+<text class="field" x="166" y="642.5">updated_at</text>
+<rect class="box" x="105" y="697" width="250" height="255"/>
+<line class="green-rule" x1="105" y1="735" x2="355" y2="735"/>
+<text class="table-name" x="230.0" y="723" text-anchor="middle">people</text>
+<line class="rule" x1="155" y1="735" x2="155" y2="952"/>
+<line class="rule" x1="105" y1="766" x2="355" y2="766"/>
+<text class="key" x="119" y="757.5">PK</text>
+<text class="field" x="166" y="757.5">id</text>
+<text class="field" x="166" y="788.5">first_name</text>
+<text class="field" x="166" y="819.5">last_name</text>
+<text class="key" x="119" y="850.5">FK</text>
+<text class="field" x="166" y="850.5">company_id</text>
+<text class="field" x="166" y="881.5">network_username</text>
+<text class="field" x="166" y="912.5">created_at</text>
+<text class="field" x="166" y="943.5">updated_at</text>
+<rect class="box" x="796" y="132" width="240" height="224"/>
+<line class="green-rule" x1="796" y1="170" x2="1036" y2="170"/>
+<text class="table-name" x="916.0" y="158" text-anchor="middle">investment</text>
+<line class="rule" x1="846" y1="170" x2="846" y2="356"/>
+<line class="rule" x1="796" y1="201" x2="1036" y2="201"/>
+<text class="key" x="810" y="192.5">PK</text>
+<text class="field" x="857" y="192.5">id</text>
+<text class="key" x="810" y="223.5">FK</text>
+<text class="field" x="857" y="223.5">funding_round_id</text>
+<text class="key" x="810" y="254.5">FK</text>
+<text class="field" x="857" y="254.5">company_id</text>
+<text class="key" x="810" y="285.5">FK</text>
+<text class="field" x="857" y="285.5">fund_id</text>
+<text class="field" x="857" y="316.5">created_at</text>
+<text class="field" x="857" y="347.5">updated_at</text>
+<rect class="box" x="796" y="409" width="273" height="379"/>
+<line class="green-rule" x1="796" y1="447" x2="1069" y2="447"/>
+<text class="table-name" x="932.5" y="435" text-anchor="middle">funding_round</text>
+<line class="rule" x1="846" y1="447" x2="846" y2="788"/>
+<line class="rule" x1="796" y1="478" x2="1069" y2="478"/>
+<text class="key" x="810" y="469.5">PK</text>
+<text class="field" x="857" y="469.5">id</text>
+<text class="key" x="810" y="500.5">FK</text>
+<text class="field" x="857" y="500.5">company_id</text>
+<text class="field" x="857" y="531.5">funded_at</text>
+<text class="field" x="857" y="562.5">funding_round_type</text>
+<text class="field" x="857" y="593.5">raised_amount</text>
+<text class="field" x="857" y="624.5">pre_money_valuation</text>
+<text class="field" x="857" y="655.5">participants</text>
+<text class="field" x="857" y="686.5">is_first_round</text>
+<text class="field" x="857" y="717.5">is_last_round</text>
+<text class="field" x="857" y="748.5">created_at</text>
+<text class="field" x="857" y="779.5">updated_at</text>
+<rect class="box" x="1115" y="228" width="263" height="379"/>
+<line class="green-rule" x1="1115" y1="266" x2="1378" y2="266"/>
+<text class="table-name" x="1246.5" y="254" text-anchor="middle">fund</text>
+<line class="rule" x1="1165" y1="266" x2="1165" y2="607"/>
+<line class="rule" x1="1115" y1="297" x2="1378" y2="297"/>
+<text class="key" x="1129" y="288.5">PK</text>
+<text class="field" x="1176" y="288.5">id</text>
+<text class="field" x="1176" y="319.5">name</text>
+<text class="field" x="1176" y="350.5">founded_at</text>
+<text class="field" x="1176" y="381.5">domain</text>
+<text class="field" x="1176" y="412.5">network_username</text>
+<text class="field" x="1176" y="443.5">country_code</text>
+<text class="field" x="1176" y="474.5">investment_rounds</text>
+<text class="field" x="1176" y="505.5">invested_companies</text>
+<text class="field" x="1176" y="536.5">milestones</text>
+<text class="field" x="1176" y="567.5">created_at</text>
+<text class="field" x="1176" y="598.5">updated_at</text>
+</svg>

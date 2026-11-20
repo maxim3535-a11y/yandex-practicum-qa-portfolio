@@ -4,7 +4,7 @@
 
 ## ER-диаграмма
 
-![ER-диаграмма базы данных](./Database-ERD.png)
+![ER-диаграмма базы данных](./Database-ERD.svg)
 
 На схеме показаны семь таблиц и связи между ними: `company`, `people`, `education`, `fund`, `funding_round`, `investment` и `acquisition`.
 
