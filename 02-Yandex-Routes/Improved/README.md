@@ -13,4 +13,4 @@ The workbooks use cleaned table layouts, consistent headers, wrapped multi-line 
 
 CSV browser previews are listed directly in this folder: The test-case index is a compact listing of all 60 test cases; the full test steps and expected results remain in [Test-Cases.xlsx](./Excel/Test-Cases.xlsx).
 
-The original, unmodified four-sheet source workbook is stored in [Originals](../Originals/Yandex-Routes-Source-Workbook-Original.xlsx).
+The original, unmodified four-sheet source workbook is stored in [Originals](.../Originals/Excel/Yandex-Routes-Source-Workbook-Original.xlsx).
