@@ -1,16 +1,16 @@
-# Improved workbooks
+# Улучшенные книги
 
-The original four-sheet workbook was separated into four independent Excel workbooks:
+Исходная книга с четырьмя листами была разделена на четыре самостоятельные книги Excel:
 
-- [Test-Analysis.xlsx](./Excel/Test-Analysis.xlsx) — test analysis for field validation and private-car calculations.
-- [Equivalence-Classes-Boundary-Values.xlsx](./Excel/Equivalence-Classes-Boundary-Values.xlsx) — equivalence partitions and selected boundary values.
-- [Test-Cases.xlsx](./Excel/Test-Cases.xlsx) — 60 executed test cases.
-- [Bug-Reports.xlsx](./Excel/Bug-Reports.xlsx) — 16 recorded defect reports.
+- [Test-Analysis.xlsx](./Excel/Test-Analysis.xlsx) — анализ тестирования валидации полей и расчётов для поездки на личном автомобиле.
+- [Equivalence-Classes-Boundary-Values.xlsx](./Excel/Equivalence-Classes-Boundary-Values.xlsx) — классы эквивалентности и выбранные граничные значения.
+- [Test-Cases.xlsx](./Excel/Test-Cases.xlsx) — 60 выполненных тест-кейсов.
+- [Bug-Reports.xlsx](./Excel/Bug-Reports.xlsx) — 16 зарегистрированных дефектов.
 
-All four improved Excel workbooks are stored directly in this folder and are available through the links above.
+Все четыре улучшенные книги Excel находятся в подпапке [Excel](./Excel/) и доступны по ссылкам выше.
 
-The workbooks use cleaned table layouts, consistent headers, wrapped multi-line steps, and frozen header rows. All four Excel files are grouped in the [Excel](./Excel/) subfolder. CSV previews are visible directly in this folder and can be opened in GitHub without downloading. Empty grouping labels were filled down where necessary for readability; recorded test results, bug priorities, and bug statuses were preserved.
+В книгах приведены к единому виду таблицы и заголовки столбцов, настроен перенос строк в длинных шагах и закреплены строки заголовков. Для удобства чтения пустые значения в группирующих столбцах были заполнены значениями из предыдущих строк; зафиксированные результаты тестирования, приоритеты и статусы дефектов сохранены. CSV-превью размещены непосредственно в этой папке и открываются на GitHub без скачивания.
 
-CSV browser previews are listed directly in this folder: The test-case index is a compact listing of all 60 test cases; the full test steps and expected results remain in [Test-Cases.xlsx](./Excel/Test-Cases.xlsx).
+Индекс тест-кейсов содержит краткий перечень всех 60 проверок. Полные шаги и ожидаемые результаты находятся в [Test-Cases.xlsx](./Excel/Test-Cases.xlsx).
 
-The original, unmodified four-sheet source workbook is stored in [Originals](.../Originals/Excel/Yandex-Routes-Source-Workbook-Original.xlsx).
+Исходная книга с четырьмя листами, не подвергавшаяся изменениям, находится в [Originals](../Originals/Excel/Yandex-Routes-Source-Workbook-Original.xlsx).

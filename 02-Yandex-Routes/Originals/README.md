@@ -1,8 +1,8 @@
-# Original source materials
+# Исходные материалы
 
-The original materials supplied for Project 02 are preserved without modification:
+Исходные материалы, предоставленные для проекта 02, сохранены без изменений:
 
-- [Yandex-Routes-Source-Workbook-Original.xlsx](./Excel/Yandex-Routes-Source-Workbook-Original.xlsx) — original workbook containing four worksheets: Test Analysis, Equivalence Classes and Boundary Values, Test Cases, and Bug Reports. The original Excel file is grouped in the [Excel](./Excel/) subfolder.
-- `Yandex-Routes-Requirements-Original.docx` — original Yandex Routes requirements document. This file is preserved in the downloadable source-materials archive; it is not currently committed as a separate file in this repository.
+- [Yandex-Routes-Source-Workbook-Original.xlsx](./Excel/Yandex-Routes-Source-Workbook-Original.xlsx) — исходная книга с четырьмя листами: «Тест-анализ», «Классы эквивалентности и граничные значения», «Тест-кейсы» и «Баг-репорты». Книга Excel находится в подпапке [Excel](./Excel/).
+- Yandex-Routes-Requirements-Original.docx — исходный документ с требованиями к Яндекс Маршрутам. Он сохранён в архиве исходных материалов и пока не размещён в репозитории отдельным файлом.
 
-The improved, separated Excel workbooks are stored in [Improved](../Improved/README.md). The source workbook above remains unchanged; the improved workbooks are separate review-friendly versions.
+Улучшенные, разделённые на отдельные книги Excel находятся в папке [Improved](../Improved/README.md). Приведённая выше исходная книга не изменялась; улучшенные книги являются отдельными версиями, подготовленными для более удобного просмотра.

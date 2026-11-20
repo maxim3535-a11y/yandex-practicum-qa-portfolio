@@ -1,88 +1,88 @@
-# Project 01 — Mesto Web Application Testing
+# Проект 01 — Тестирование веб-приложения Mesto
 
-## Project overview
+## О проекте
 
-Mesto is a training web application for working with a user profile and a gallery of place cards. Users can edit their profile information and interact with place cards: view photos, like places, and delete cards.
+Mesto — учебное веб-приложение для работы с профилем пользователя и галереей карточек мест. Пользователи могут редактировать данные профиля и взаимодействовать с карточками: просматривать фотографии, ставить отметки «Нравится» и удалять карточки.
 
-This project documents manual testing of the application. The materials include a 17-case profile-editing regression suite, a 10-record bug-report set focused on profile functionality, and a separate 15-record retest log covering both profile and gallery issues. The bug-report and retest workbooks use different identifiers and are not a one-to-one mapping.
+В проекте представлено ручное тестирование приложения. Материалы включают регрессионный набор из 17 тест-кейсов для редактирования профиля, набор из 10 баг-репортов по функциональности профиля и отдельный журнал из 15 записей о ретестировании дефектов профиля и галереи. В баг-репортах и журнале ретестирования используются разные идентификаторы, поэтому записи не сопоставляются один к одному.
 
-## Application and test environment
+## Приложение и тестовое окружение
 
-- **Application:** Mesto web application
-- **Test stand:** [Mesto test stand](https://code.s3.yandex.net/qa/files/mesto/index.html)
-- **Requirements:** [Mesto requirements](https://praktikum.notion.site/Mesto-9f2cfaa209734d1f8cfa0c0db3d3049f)
-- **Browser recorded in the source workbooks:** Google Chrome 140.0.7339.128
-- **Testing approach:** Manual testing
+- **Приложение:** веб-приложение Mesto
+- **Тестовый стенд:** [Открыть Mesto](https://code.s3.yandex.net/qa/files/mesto/index.html)
+- **Требования:** [Требования к Mesto](https://praktikum.notion.site/Mesto-9f2cfaa209734d1f8cfa0c0db3d3049f)
+- **Браузер, указанный в исходных таблицах:** Google Chrome 140.0.7339.128
+- **Подход к тестированию:** ручное тестирование
 
-The source materials do not specify the operating system, viewport dimensions, browser configuration, or application build/version. These details are not inferred.
+В исходных материалах не указаны операционная система, размеры области просмотра, настройки браузера и версия сборки приложения. Эти сведения не додумывались.
 
-## Application areas represented in the test artifacts
+## Области приложения, отражённые в тестовых материалах
 
-### 1. Profile management
+### 1. Управление профилем
 
-The 17 test cases in the regression workbook focus on the profile-editing form:
-- Opening and closing the profile-editing form
-- Displaying the current name and occupation in the form
-- Updating profile name and occupation
-- Minimum and maximum field-length validation
-- Save button behavior for valid, invalid, and empty values
-- Trimming whitespace on save
-- Form layout checks
+17 тест-кейсов регрессионного набора проверяют форму редактирования профиля:
+- Открытие и закрытие формы редактирования профиля
+- Отображение в форме текущих имени и информации о занятии
+- Изменение имени и информации о занятии
+- Проверка минимальной и максимальной длины значений в полях
+- Поведение кнопки сохранения при корректных, некорректных и пустых значениях
+- Удаление пробелов в конце значений при сохранении
+- Проверка расположения формы на странице
 
-### 2. Places gallery
+### 2. Галерея мест
 
-The separate retest log also covers the places gallery. The 10 records in the bug-report workbook are focused on profile editing and do not document gallery defects.
-- Opening place photos and viewing place descriptions
-- Liking place cards
-- Deleting place cards
-- Adding a new photo/card
-- Displaying cards and scrolling the gallery
-- Closing the opened card/photo view
+Отдельный журнал ретестирования также охватывает галерею мест. 10 записей в книге с баг-репортами относятся к редактированию профиля и не описывают дефекты галереи.
+- Открытие фотографий мест и просмотр описаний
+- Установка отметок «Нравится» на карточках
+- Удаление карточек мест
+- Добавление новой фотографии/карточки
+- Отображение карточек и прокрутка галереи
+- Закрытие открытого просмотра карточки/фотографии
 
-**Scope clarification:** the 17-case regression suite and the 10 bug reports cover profile editing. Gallery issues appear in the separate 15-record retest log, which uses IDs Б1–Б15 and is not a one-to-one retest mapping for bug IDs ID_1–ID_10.
+**Уточнение области тестирования:** регрессионный набор из 17 тест-кейсов и 10 баг-репортов относятся к редактированию профиля. Проблемы галереи отражены в отдельном журнале из 15 записей о ретестировании с ID Б1–Б15. Эти идентификаторы не соответствуют один к одному ID_1–ID_10 из баг-репортов.
 
-## Test results
+## Результаты тестирования
 
-| Artifact | Records | Recorded outcome |
+| Артефакт | Количество записей | Зафиксированный результат |
 |---|---:|---|
-| Profile regression test cases | 17 | 7 Passed · 7 Failed · 3 Blocked |
-| Bug reports | 10 | 10 Open in the submitted bug-report workbook |
-| Retest records | 15 | 10 Closed · 2 Reopened · 3 Skipped |
+| Регрессионные тест-кейсы профиля | 17 | 7 пройдено · 7 не пройдено · 3 заблокировано |
+| Баг-репорты | 10 | 10 открытых на момент заполнения исходной книги |
+| Записи о ретестировании | 15 | 10 закрыто · 2 переоткрыто · 3 пропущено |
 
-### Key observations
+### Основные наблюдения
 
-- The profile regression run recorded failures involving profile data display and saving, as well as field-validation messages.
-- Three profile test cases were marked Blocked in the source workbook.
-- All 10 records in the bug-report workbook concern profile management; gallery-related issues appear in the separate retest log.
-- During retesting, two defects were marked Reopened because the issues remained unresolved.
-- Three retests were marked Skipped because the required UI controls were unavailable on the test stand at the time of retesting.
+- В ходе регрессионного тестирования профиля были зафиксированы ошибки отображения и сохранения данных профиля, а также ошибки в сообщениях валидации полей.
+- Три тест-кейса профиля имеют статус «Заблокирован» в исходной книге.
+- Все 10 записей в книге баг-репортов относятся к управлению профилем; проблемы галереи отражены в отдельном журнале ретестирования.
+- Во время ретестирования два дефекта получили статус «Переоткрыт», поскольку проблемы остались нерешёнными.
+- Три ретеста были пропущены, так как необходимые элементы интерфейса отсутствовали на тестовом стенде во время повторной проверки.
 
-These figures reflect the statuses recorded in the supplied workbooks. They are not a claim that every feature of the application was tested.
+Эти показатели отражают статусы, записанные в предоставленных таблицах. Они не означают, что были протестированы все функции приложения.
 
-## Project files
+## Файлы проекта
 
-| Folder | Contents |
+| Папка | Содержимое |
 |---|---|
-| [Originals](./Originals/) | CSV exports for browser viewing; original Excel workbooks in [Excel](./Originals/Excel/) |
-| [Improved](./Improved/) | CSV previews visible directly in the folder; downloadable Excel workbooks in [Excel](./Improved/Excel/) |
-| [Documentation](./Documentation/) | Test-environment notes and scope details |
+| [Originals](./Originals/) | CSV-экспорты для просмотра в браузере; исходные книги Excel находятся в [Excel](./Originals/Excel/) |
+| [Improved](./Improved/) | CSV-превью доступны непосредственно в папке; улучшенные книги Excel для скачивания находятся в [Excel](./Improved/Excel/) |
+| [Documentation](./Documentation/) | Сведения о тестовом окружении и границах тестирования |
 
-The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion. The updated bug-report CSV preview preserves the screenshot filename references from the source workbook for ID_2, ID_3, ID_5, and ID_8. The screenshot image files themselves were not included in the supplied materials.
+В улучшенной книге ретестирования исходный зафиксированный результат отделён от последующего комментария по ретесту. Благодаря этому первоначальное описание дефекта не смешивается с выводом повторной проверки. В обновлённом CSV-превью баг-репортов сохранены ссылки на имена скриншотов из исходной книги для ID_2, ID_3, ID_5 и ID_8. Сами файлы изображений в предоставленных материалах отсутствовали и в репозиторий не включены.
 
-### Improved workbooks and browser previews
+### Улучшенные книги и превью для просмотра в браузере
 
-GitHub does not display .xlsx workbooks as interactive tables in its file viewer. The Excel links download the workbooks; the CSV preview links open as readable tables directly on GitHub.
+GitHub не отображает книги .xlsx в виде интерактивных таблиц. Ссылки на Excel-файлы позволяют скачать книги, а CSV-превью открываются непосредственно на GitHub в виде таблиц.
 
-| Artifact | Excel workbook | Browser preview |
+| Артефакт | Книга Excel | Просмотр в браузере |
 |---|---|---|
-| Profile regression test cases | [Download XLSX](./Improved/Excel/Mesto-Test-Cases-IMPROVED.xlsx) | [View CSV](./Improved/Mesto-Test-Cases-IMPROVED-DATA.csv) |
-| Bug reports | [Download XLSX](./Improved/Excel/Mesto-Bug-Reports-IMPROVED.xlsx) | [View CSV](./Improved/Mesto-Bug-Reports-IMPROVED-DATA.csv) |
-| Retest results | [Download XLSX](./Improved/Excel/Mesto-Retest-Results-IMPROVED.xlsx) | [View CSV](./Improved/Mesto-Retest-Results-IMPROVED-DATA.csv) |
+| Регрессионные тест-кейсы профиля | [Скачать XLSX](./Improved/Excel/Mesto-Test-Cases-IMPROVED.xlsx) | [Открыть CSV](./Improved/Mesto-Test-Cases-IMPROVED-DATA.csv) |
+| Баг-репорты | [Скачать XLSX](./Improved/Excel/Mesto-Bug-Reports-IMPROVED.xlsx) | [Открыть CSV](./Improved/Mesto-Bug-Reports-IMPROVED-DATA.csv) |
+| Результаты ретестирования | [Скачать XLSX](./Improved/Excel/Mesto-Retest-Results-IMPROVED.xlsx) | [Открыть CSV](./Improved/Mesto-Retest-Results-IMPROVED-DATA.csv) |
 
-The original submitted Excel workbooks are available in [Originals](./Originals/). CSV exports of those worksheets are directly in [Originals](./Originals/) for browser viewing; the original Excel files are grouped in [Originals/Excel](./Originals/Excel/). CSV preserves worksheet cell values and text, but not Excel formatting, formulas, charts, or workbook-level features. The improved `.xlsx` files above are the reorganized Excel versions prepared for this portfolio.
+Исходные книги Excel доступны в папке [Originals](./Originals/). CSV-экспорты этих таблиц размещены непосредственно в [Originals](./Originals/) для просмотра в браузере; исходные файлы Excel сгруппированы в [Originals/Excel](./Originals/Excel/). CSV сохраняет значения ячеек и текст, но не форматирование Excel, формулы, диаграммы и другие возможности книги. Улучшенные файлы .xlsx выше — это переработанные версии Excel, подготовленные для портфолио.
 
-The spreadsheets are in Russian because the original training assignment and source materials were in Russian. This project overview is in English.
+Исходные таблицы и материалы задания представлены на русском языке. Описание проекта в репозитории также подготовлено на русском языке.
 
-## Skills demonstrated
+## Продемонстрированные навыки
 
-Manual testing · Functional testing · Regression testing · Test case execution · Test documentation · Bug reporting · Defect lifecycle · Retesting · Defect verification
+Ручное тестирование · Функциональное тестирование · Регрессионное тестирование · Выполнение тест-кейсов · Тестовая документация · Составление баг-репортов · Жизненный цикл дефекта · Ретестирование · Проверка исправлений

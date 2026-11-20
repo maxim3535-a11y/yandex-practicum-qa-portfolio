@@ -1,15 +1,15 @@
-# Original workbooks
+# Исходные книги
 
-The original Excel workbooks submitted for the Mesto training assignment are preserved here:
+Здесь сохранены исходные книги Excel, предоставленные для учебного задания по Mesto:
 
-- [Original test cases — XLSX](./Excel/Mesto-Test-Cases-ORIGINAL.xlsx)
-- [Original bug reports — XLSX](./Excel/Mesto-Bug-Reports-ORIGINAL.xlsx)
-- [Original retest results — XLSX](./Excel/Mesto-Retest-Results-ORIGINAL.xlsx)
+- [Исходные тест-кейсы — XLSX](./Excel/Mesto-Test-Cases-ORIGINAL.xlsx)
+- [Исходные баг-репорты — XLSX](./Excel/Mesto-Bug-Reports-ORIGINAL.xlsx)
+- [Исходные результаты ретестирования — XLSX](./Excel/Mesto-Retest-Results-ORIGINAL.xlsx)
 
-For quick viewing in a browser, use the CSV data exports placed directly in this folder. The original Excel workbooks are grouped in the [Excel](./Excel/) subfolder:
+Для быстрого просмотра в браузере используйте соответствующие CSV-экспорты, размещённые непосредственно в этой папке. Исходные книги Excel сгруппированы в подпапке [Excel](./Excel/):
 
-- [Test cases — CSV](./Mesto-Test-Cases-ORIGINAL-DATA.csv)
-- [Bug reports — CSV](./Mesto-Bug-Reports-ORIGINAL-DATA.csv)
-- [Retest results — CSV](./Mesto-Retest-Results-ORIGINAL-DATA.csv)
+- [Тест-кейсы — CSV](./Mesto-Test-Cases-ORIGINAL-DATA.csv)
+- [Баг-репорты — CSV](./Mesto-Bug-Reports-ORIGINAL-DATA.csv)
+- [Результаты ретестирования — CSV](./Mesto-Retest-Results-ORIGINAL-DATA.csv)
 
-CSV preserves cell values and text, but not Excel formatting, formulas, charts, multiple-sheet workbook structure, or other workbook-level features.
+CSV сохраняет значения ячеек и текст, но не форматирование Excel, формулы, диаграммы, структуру книги с несколькими листами и другие возможности формата Excel.

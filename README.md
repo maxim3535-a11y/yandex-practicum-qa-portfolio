@@ -1,47 +1,54 @@
-# Yandex Practicum — QA Portfolio
+# Портфолио QA-инженера — проекты Яндекс Практикума
 
-Welcome to my QA Engineering portfolio. This repository contains practical training projects completed as part of my QA studies at Yandex Practicum.
+Добро пожаловать в моё портфолио QA-инженера. Здесь собраны учебные проекты, выполненные в рамках обучения тестированию в Яндекс Практикуме.
 
-## About me
+## Обо мне
 
-I have 8 years of previous IT experience in system administration and technical support. I completed the QA Engineer program at Yandex Practicum and am developing my skills in manual software testing.
+У меня 8 лет опыта в IT: системное администрирование и техническая поддержка. Я прошёл программу «Инженер по тестированию» в Яндекс Практикуме и развиваю навыки ручного тестирования программного обеспечения.
 
-## Projects
+## Проекты
 
-| # | Project | Scope | Documentation |
+| № | Проект | Область тестирования | Описание |
 |---|---|---|---|
-| 01 | **Mesto Web Application** | Profile regression suite and profile bug reports; separate retest log also covers gallery features | [Open project](./01-Mesto/README.md) |
-| 02 | **Yandex Routes** | Field validation, equivalence classes and boundary values, 60 test cases, private-car time/cost calculation, 16 bug reports | [Open project](./02-Yandex-Routes/README.md) |
+| 01 | **Веб-приложение Mesto** | Регрессионное тестирование профиля и баг-репорты по работе с профилем; отдельный журнал ретестирования также охватывает функции галереи | [Открыть проект](./01-Mesto/README.md) |
+| 02 | **Яндекс Маршруты** | Валидация полей, классы эквивалентности и граничные значения, 60 тест-кейсов, расчёт времени и стоимости поездки на личном автомобиле, 16 баг-репортов | [Открыть проект](./02-Yandex-Routes/README.md) |
 
-## Skills represented
+## Представленные навыки
 
-- Manual and functional testing
-- Requirements analysis and test design
-- Equivalence partitioning and boundary value analysis
-- Regression testing and test execution
-- Bug reporting: steps to reproduce, expected and actual results, severity and priority
-- Retesting and defect lifecycle
-- Web application testing
+- Ручное и функциональное тестирование
+- Анализ требований и проектирование тестов
+- Разбиение на классы эквивалентности и анализ граничных значений
+- Регрессионное тестирование и выполнение тест-кейсов
+- Составление баг-репортов: шаги воспроизведения, ожидаемый и фактический результаты, серьёзность и приоритет
+- Ретестирование и работа с жизненным циклом дефекта
+- Тестирование веб-приложений
 
-## Repository structure
+## Структура репозитория
 
-```text
+~~~text
 yandex-practicum-qa-portfolio/
 ├── README.md
 ├── 01-Mesto/
+│   ├── README.md
+│   ├── Documentation/
+│   ├── Originals/
+│   │   ├── *.csv                 # CSV-экспорты исходных данных
+│   │   └── Excel/*.xlsx          # исходные книги Excel
+│   └── Improved/
+│       ├── *.csv                 # CSV-превью для просмотра на GitHub
+│       └── Excel/*.xlsx          # улучшенные книги Excel для скачивания
 └── 02-Yandex-Routes/
     ├── README.md
     ├── Documentation/
     ├── Originals/
-    │   ├── *.csv                 # original data previews
-    │   └── Excel/*.xlsx          # original Excel workbooks
+    │   └── Excel/*.xlsx          # исходная книга Excel
     └── Improved/
-        ├── *.csv                 # recruiter-friendly browser previews
-        └── Excel/*.xlsx          # downloadable improved workbooks
-```
+        ├── *.csv                 # CSV-превью для просмотра на GitHub
+        └── Excel/*.xlsx          # улучшенные книги Excel для скачивания
+~~~
 
-More projects will be added as their documentation is prepared.
+В дальнейшем в репозиторий будут добавляться новые проекты по мере подготовки документации.
 
 ---
 
-*The projects in this repository are educational works. Yandex Practicum is the educational program provider; this is a personal portfolio and is not an official Yandex repository.*
+*Проекты в этом репозитории являются учебными работами. Яндекс Практикум выступает образовательной платформой; это личное портфолио, а не официальный репозиторий Яндекса.*

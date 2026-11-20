@@ -1,93 +1,93 @@
-# Project 02 — Yandex Routes: Field Validation and Car Route Calculation
+# Проект 02 — Яндекс Маршруты: валидация полей и расчёт маршрута на автомобиле
 
-## Project overview
+## О проекте
 
-This project documents manual testing of the Yandex Routes training stand. The assignment focused on two areas:
+Проект посвящён ручному тестированию учебного стенда Яндекс Маршрутов. Задание было сосредоточено на двух областях:
 
-1. Validation of the departure-time and address fields.
-2. Calculation of travel time and cost for a private car.
+1. Валидация полей времени отправления и адресов.
+2. Расчёт времени и стоимости поездки на личном автомобиле.
 
-The source workbook originally contained four worksheets. They were separated into four independent Excel workbooks for easier review:
+В исходной книге Excel было четыре листа. Для удобства изучения они были разделены на четыре самостоятельные книги:
 
-- **Test analysis:** decomposition of field validation and private-car calculations.
-- **Equivalence classes and boundary values:** test partitions and selected boundary data.
-- **Test cases:** 60 executed test cases.
-- **Bug reports:** 16 recorded defects.
+- **Тест-анализ:** декомпозиция проверок валидации полей и расчёта поездки на личном автомобиле.
+- **Классы эквивалентности и граничные значения:** классы тестовых данных и выбранные граничные значения.
+- **Тест-кейсы:** 60 выполненных тест-кейсов.
+- **Баг-репорты:** 16 зарегистрированных дефектов.
 
-All four improved Excel workbooks and the original multi-sheet source workbook are committed directly to this repository. CSV previews are also provided for browser viewing.
+Все четыре улучшенные книги Excel и исходная книга с несколькими листами размещены непосредственно в репозитории. CSV-превью также доступны для просмотра в браузере.
 
-## Application and test environment
+## Приложение и тестовое окружение
 
-- **Test stand:** [Yandex Routes](https://qa-routes.praktikum-services.ru/)
-- **Requirements:** original requirements document, preserved in the source-materials archive; see [Originals](./Originals/README.md)
-- **Testing approach:** manual testing
-- **Browser recorded in test cases:** Google Chrome 141.0.7390.5–141.0.7390.26 (20 distinct patch versions occur in the source records)
-- **Browser recorded in bug reports:** Google Chrome 141.0.7390.14
+- **Тестовый стенд:** [Яндекс Маршруты](https://qa-routes.praktikum-services.ru/)
+- **Требования:** исходный документ с требованиями сохранён в архиве исходных материалов; см. [Originals](./Originals/README.md)
+- **Подход к тестированию:** ручное тестирование
+- **Браузер, указанный в тест-кейсах:** Google Chrome 141.0.7390.5–141.0.7390.26 (в исходных записях встречается 20 различных патч-версий)
+- **Браузер, указанный в баг-репортах:** Google Chrome 141.0.7390.14
 
-The source materials do not consistently identify one browser build for the whole test run. The operating system, viewport, browser configuration, and application build/version are not recorded.
+В исходных материалах не указана одна единая версия браузера для всего прогона. Операционная система, размер области просмотра, конфигурация браузера и версия сборки приложения также не зафиксированы.
 
-## Scope
+## Область тестирования
 
-### Field validation
+### Валидация полей
 
-- Hours: integer values from 0 to 23; automatic leading zero for one-digit values.
-- Minutes: integer values from 0 to 59; automatic leading zero for one-digit values.
-- Origin and destination: only the seven addresses listed in the requirements; leading and trailing spaces are to be removed on blur.
-- Validation is triggered when focus leaves a field.
+- Часы: целые числа от 0 до 23; для однозначных значений автоматически добавляется ведущий ноль.
+- Минуты: целые числа от 0 до 59; для однозначных значений автоматически добавляется ведущий ноль.
+- Адрес отправления и адрес назначения: допускаются только семь адресов, перечисленных в требованиях; начальные и конечные пробелы должны удаляться при потере фокуса.
+- Проверка выполняется, когда пользователь уводит фокус с поля.
 
-### Private-car calculation
+### Расчёт поездки на личном автомобиле
 
-- Road distance is determined by the selected origin/destination pair.
-- Private-car price is 20 RUB per kilometre.
-- Average speed depends on departure time:
-  - 00:01–08:00 — 45 km/h
-  - 08:01–12:00 — 30 km/h
-  - 12:01–18:00 — 40 km/h
-  - 18:01–22:00 — 25 km/h
-  - 22:01–00:00 — 45 km/h
-- If a trip crosses more than one speed interval, the requirements say to use the speed for the interval in which the trip started.
+- Расстояние по дорогам определяется выбранной парой адресов отправления и назначения.
+- Стоимость поездки на личном автомобиле составляет 20 рублей за километр.
+- Средняя скорость зависит от времени отправления:
+  - 00:01–08:00 — 45 км/ч
+  - 08:01–12:00 — 30 км/ч
+  - 12:01–18:00 — 40 км/ч
+  - 18:01–22:00 — 25 км/ч
+  - 22:01–00:00 — 45 км/ч
+- Если поездка пересекает более одного временного интервала, согласно требованиям используется скорость интервала, в котором поездка началась.
 
-The test set does not cover all 7 × 7 origin/destination combinations. It uses one same-address pair and one different-address pair for the car-calculation checks.
+Набор тестов не охватывает все 7 × 7 комбинаций адресов отправления и назначения. Для проверок расчёта поездки на автомобиле использовались одна пара с одинаковыми адресами и одна пара с разными адресами.
 
-## Recorded results
+## Зафиксированные результаты
 
-| Artifact | Records | Recorded outcome |
+| Артефакт | Количество записей | Зафиксированный результат |
 |---|---:|---|
-| Test cases | 60 | 35 Passed · 25 Failed |
-| Bug reports | 16 | 16 Open |
-| Bug priorities | 16 | 9 Critical · 7 Desirable |
+| Тест-кейсы | 60 | 35 пройдено · 25 не пройдено |
+| Баг-репорты | 16 | 16 открытых |
+| Приоритеты баг-репортов | 16 | 9 критических · 7 желательных |
 
-The recorded results are retained from the source workbook. They are not a claim that every address pair, every interface mode, or every transport type was tested.
+Зафиксированные результаты перенесены из исходной книги. Они не означают, что были проверены все пары адресов, все режимы интерфейса или все виды транспорта.
 
-## Excel workbooks
+## Книги Excel
 
-| Workbook | Download |
+| Книга | Скачать |
 |---|---|
-| Test analysis | [XLSX](./Improved/Excel/Test-Analysis.xlsx) |
-| Equivalence classes and boundary values | [XLSX](./Improved/Excel/Equivalence-Classes-Boundary-Values.xlsx) |
-| Test cases | [XLSX](./Improved/Excel/Test-Cases.xlsx) |
-| Bug reports | [XLSX](./Improved/Excel/Bug-Reports.xlsx) |
-| Original multi-sheet workbook | [Original XLSX](./Originals/Excel/Yandex-Routes-Source-Workbook-Original.xlsx) |
+| Тест-анализ | [XLSX](./Improved/Excel/Test-Analysis.xlsx) |
+| Классы эквивалентности и граничные значения | [XLSX](./Improved/Excel/Equivalence-Classes-Boundary-Values.xlsx) |
+| Тест-кейсы | [XLSX](./Improved/Excel/Test-Cases.xlsx) |
+| Баг-репорты | [XLSX](./Improved/Excel/Bug-Reports.xlsx) |
+| Исходная книга с несколькими листами | [Исходный XLSX](./Originals/Excel/Yandex-Routes-Source-Workbook-Original.xlsx) |
 
-## CSV browser previews
+## CSV-превью для просмотра в браузере
 
-The CSV previews are placed directly in the Improved folder, so recruiters can open the tables in GitHub without downloading Excel files. The downloadable Excel workbooks are grouped in [Improved/Excel](./Improved/Excel/). The test-case index is a compact view with IDs, titles, execution statuses, and linked bug IDs; the full test steps and expected results are in the Excel workbook.
+CSV-превью размещены непосредственно в папке Improved, поэтому рекрутер может открыть таблицы на GitHub без скачивания файлов Excel. Книги Excel для скачивания сгруппированы в [Improved/Excel](./Improved/Excel/). Индекс тест-кейсов содержит ID, названия, статусы выполнения и связанные ID баг-репортов; полные шаги и ожидаемые результаты находятся в книге Excel.
 
-| Artifact | Browser preview |
+| Артефакт | Просмотр в браузере |
 |---|---|
-| Test analysis | [View CSV](./Improved/Test-Analysis.csv) |
-| Equivalence classes and boundary values | [View CSV](./Improved/Equivalence-Classes-Boundary-Values.csv) |
-| Test-case index | [View CSV](./Improved/Test-Cases-Index.csv) |
-| Bug reports | [View CSV](./Improved/Bug-Reports.csv) |
+| Тест-анализ | [Открыть CSV](./Improved/Test-Analysis.csv) |
+| Классы эквивалентности и граничные значения | [Открыть CSV](./Improved/Equivalence-Classes-Boundary-Values.csv) |
+| Индекс тест-кейсов | [Открыть CSV](./Improved/Test-Cases-Index.csv) |
+| Баг-репорты | [Открыть CSV](./Improved/Bug-Reports.csv) |
 
-## Review notes
+## Примечания к анализу
 
-See [Test Analysis Notes](./Documentation/Test-Analysis-Notes.md) for scope limitations, gray areas, and source-level inconsistencies that should be clarified with an expert before treating them as definitive expected behavior.
+В документе [Test Analysis Notes](./Documentation/Test-Analysis-Notes.md) описаны ограничения тестового покрытия, неоднозначности требований и несоответствия в исходных материалах, которые следует уточнить у эксперта, прежде чем считать соответствующее поведение однозначно ожидаемым.
 
-## Source materials
+## Исходные материалы
 
-The original multi-sheet workbook is committed in [Originals](./Originals/). The original requirements document is preserved in the source-materials archive; see [Originals README](./Originals/README.md) for the inventory.
+Исходная книга с несколькими листами размещена в папке [Originals](./Originals/). Оригинальный документ с требованиями сохранён в архиве исходных материалов; перечень файлов приведён в [README папки Originals](./Originals/README.md).
 
-## Skills demonstrated
+## Продемонстрированные навыки
 
-Requirements analysis · Equivalence partitioning · Boundary value analysis · Manual testing · Field validation · Test case design and execution · Bug reporting · Calculation testing · Defect documentation
+Анализ требований · Разбиение на классы эквивалентности · Анализ граничных значений · Ручное тестирование · Валидация полей · Проектирование и выполнение тест-кейсов · Составление баг-репортов · Тестирование расчётов · Документирование дефектов
