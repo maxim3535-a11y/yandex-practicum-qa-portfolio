@@ -26,9 +26,11 @@ The 17 test cases in the regression workbook cover:
 
 Recorded results: 7 Passed, 7 Failed, 3 Blocked.
 
-### Profile and places gallery — bug reports and retesting
+### Retest log — profile and places gallery
 
-The bug-report and retest workbooks include issues related to:
+The separate retest workbook contains 15 records with IDs Б1–Б15 and covers both profile and gallery behavior. It is not a one-to-one continuation of the 10 profile-focused bug reports (ID_1–ID_10).
+
+The bug-report workbook contains profile-related issues only. The retest log includes:
 - Profile data display and update
 - Profile form validation and Save button behavior
 - Opening and closing the profile-editing form

@@ -4,7 +4,7 @@
 
 Mesto is a training web application for working with a user profile and a gallery of place cards. Users can edit their profile information and interact with place cards: view photos, like places, and delete cards.
 
-This project documents manual testing of the application. The materials include a profile-editing regression suite, bug reports covering profile and gallery functionality, and retest results for previously reported defects.
+This project documents manual testing of the application. The materials include a 17-case profile-editing regression suite, a 10-record bug-report set focused on profile functionality, and a separate 15-record retest log covering both profile and gallery issues. The bug-report and retest workbooks use different identifiers and are not a one-to-one mapping.
 
 ## Application and test environment
 
@@ -31,7 +31,7 @@ The 17 test cases in the regression workbook focus on the profile-editing form:
 
 ### 2. Places gallery
 
-The bug-report and retest workbooks also cover the places gallery:
+The separate retest log also covers the places gallery. The 10 records in the bug-report workbook are focused on profile editing and do not document gallery defects.
 - Opening place photos and viewing place descriptions
 - Liking place cards
 - Deleting place cards
@@ -39,7 +39,7 @@ The bug-report and retest workbooks also cover the places gallery:
 - Displaying cards and scrolling the gallery
 - Closing the opened card/photo view
 
-**Scope clarification:** the 17-case regression suite is specifically about profile editing. It should not be interpreted as a full regression suite for the places gallery.
+**Scope clarification:** the 17-case regression suite and the 10 bug reports cover profile editing. Gallery issues appear in the separate 15-record retest log, which uses IDs Б1–Б15 and is not a one-to-one retest mapping for bug IDs ID_1–ID_10.
 
 ## Test results
 
@@ -53,7 +53,7 @@ The bug-report and retest workbooks also cover the places gallery:
 
 - The profile regression run recorded failures involving profile data display and saving, as well as field-validation messages.
 - Three profile test cases were marked Blocked in the source workbook.
-- The bug-report set includes issues in both profile management and the places gallery.
+- All 10 records in the bug-report workbook concern profile management; gallery-related issues appear in the separate retest log.
 - During retesting, two defects were marked Reopened because the issues remained unresolved.
 - Three retests were marked Skipped because the required UI controls were unavailable on the test stand at the time of retesting.
 
@@ -67,7 +67,7 @@ These figures reflect the statuses recorded in the supplied workbooks. They are 
 | [Improved](./Improved/) | Reorganized Excel workbooks with consistent column names and a more readable tabular structure |
 | [Documentation](./Documentation/) | Test-environment notes and scope details |
 
-The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion.
+The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion. The improved bug-report workbook also preserves source-workbook screenshot references for ID_2, ID_3, ID_5, and ID_8. The screenshot image files themselves were not included in the supplied materials.
 
 ### Improved workbooks and browser previews
 
