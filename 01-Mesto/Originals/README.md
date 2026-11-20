@@ -1,5 +1,5 @@
-# Original workbooks
+# Original source files
 
-This folder contains copies of the original workbooks submitted for the Mesto QA training assignment. The original Russian-language content and recorded results are preserved.
+The submitted training workbooks are kept separately from the review-ready portfolio files. The reorganized versions intended for convenient review are available in the [Improved](../Improved/) folder.
 
-For a more readable, reorganized version, see the [Improved](../Improved/) folder.
+The project overview records the original execution outcomes and makes clear which test artifacts cover profile management and which cover the places gallery.
