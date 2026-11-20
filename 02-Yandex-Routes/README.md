@@ -14,7 +14,7 @@ The source workbook originally contained four worksheets. They were separated in
 - **Test cases:** 60 executed test cases.
 - **Bug reports:** 16 recorded defects.
 
-The complete Excel set and original source materials are included in the downloadable project archive. CSV previews are provided below for browser viewing.
+The four separated Excel workbooks and the original source workbook are available in the project package. Two improved Excel files are now also stored directly in this repository; the other two improved workbooks and the original source workbook remain in the package while their direct binary uploads are completed. CSV previews are provided below for browser viewing.
 
 ## Application and test environment
 
@@ -59,9 +59,19 @@ The test set does not cover all 7 × 7 origin/destination combinations. It uses 
 
 The recorded results are retained from the source workbook. They are not a claim that every address pair, every interface mode, or every transport type was tested.
 
+## Excel workbooks
+
+| Workbook | Download |
+|---|---|
+| Equivalence classes and boundary values | [XLSX](./Improved/Equivalence-Classes-Boundary-Values.xlsx) |
+| Bug reports | [XLSX](./Improved/Bug-Reports.xlsx) |
+| Test analysis | Included in the project package; direct repository upload pending |
+| Test cases | Included in the project package; direct repository upload pending |
+| Original multi-sheet workbook | Included in the project package; direct repository upload pending |
+
 ## CSV browser previews
 
-The CSV previews show the worksheet data directly in GitHub. The test-case index is a compact view with IDs, titles, execution statuses, and linked bug IDs; the full test steps and expected results are in the Excel workbook in the project archive.
+The CSV previews show the worksheet data directly in GitHub. The test-case index is a compact view with IDs, titles, execution statuses, and linked bug IDs; the full test steps and expected results are in the Excel workbook in the project package.
 
 | Artifact | Browser preview |
 |---|---|
@@ -76,7 +86,7 @@ See [Test Analysis Notes](./Documentation/Test-Analysis-Notes.md) for scope limi
 
 ## Source materials and Excel workbooks
 
-The original multi-sheet workbook, requirements document, and four separated Excel workbooks are preserved in the downloadable project archive. See [Originals](./Originals/README.md) and [Improved](./Improved/README.md) for the file inventory. The Excel files are not stored as individual binaries in this GitHub revision; the CSV previews above are available in the repository.
+The original multi-sheet workbook and requirements document are preserved in the downloadable project package. See [Originals](./Originals/README.md) and [Improved](./Improved/README.md) for the file inventory and current repository download status.
 
 ## Skills demonstrated
 
