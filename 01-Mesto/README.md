@@ -63,11 +63,19 @@ These figures reflect the statuses recorded in the supplied workbooks. They are 
 
 | Folder | Contents |
 |---|---|
-| [Originals](./Originals/) | Copies of the submitted training workbooks; original content and language are preserved |
-| [Improved](./Improved/) | Reorganized workbooks with consistent column names and a more readable tabular structure |
+| [Originals](./Originals/) | Notes about the separately retained submitted source workbooks |
+| [Improved](./Improved/) | Reorganized Excel workbooks with consistent column names and a more readable tabular structure |
 | [Documentation](./Documentation/) | Test-environment notes and scope details |
 
 The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion.
+
+### Improved Excel workbooks
+
+- [Profile regression test cases](./Improved/Mesto-Test-Cases-IMPROVED.xlsx)
+- [Bug reports](./Improved/Mesto-Bug-Reports-IMPROVED.xlsx)
+- [Retest results](./Improved/Mesto-Retest-Results-IMPROVED.xlsx)
+
+The original source workbooks are retained separately and are not included in this repository at this stage. The files published here are the reorganized versions prepared for portfolio review.
 
 The spreadsheets are in Russian because the original training assignment and source materials were in Russian. This project overview is in English.
 
