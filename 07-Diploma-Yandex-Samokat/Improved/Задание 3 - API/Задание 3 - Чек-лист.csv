@@ -1,0 +1,219 @@
+﻿Запрос,Описание проверки,Статус,Ссылка на баг-репорт
+"Создание курьера: POST /api/v1/courier
+
+    ""login"": ""maxim"",
+    ""password"": ""1234"",
+    ""firstName"": ""Maxim""",Проверка вводимых данных в поле login:,,
+,201 created:,,
+,"ввести латинские буквы, заглавные буквы, (длины 2, 3, 5, 9, 10) и отправить запрос с валидным паролем(1234) и именем(Maxim)
+""login"": ""mx""
+""login"": ""max""
+""login"": ""Maxim""
+""login"": ""maxim""
+""login"": ""maximmmmm""
+""login"": ""maximmmmmm""","PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED",
+,"проверить, создание курьера в базе данных в таблице Couriers
+mx
+max
+maxim
+maximmmmm
+maximmmmmm","PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED",
+,400 Bad Request:,,
+,"ввести кириллические буквы
+""login"": ""Максим""",FAILED,BUG3.1.2
+,"ввести спецсимволы
+""login"": ""maxim!""",FAILED,BUG3.1.1
+,"ввести пробел
+""login"": ""max m""",FAILED,BUG3.1.3
+,"ввести цифры
+""login"": ""maxim1""
+""login"": 1","FAILED
+FAILED","BUG3.1.4
+BUG3.1.5"
+,"проверить по длине: 1, 11, 12, 15, 
+""login"": ""m""
+""login"": ""maximmmmmmm""
+""login"": ""maximmmmmmmm""
+""login"": ""maximmmmmmmmmmm""","FAILED
+FAILED
+FAILED
+FAILED","BUG3.1.6
+BUG3.1.7
+BUG3.1.8
+BUG3.1.9"
+,"HTTP/1.1 400 Bad Request
+{
+  ""message"": ""Недостаточно данных для создания учетной записи""
+}",,
+,непередаем параметр login,PASSED,
+,"оставить пустым
+""login"": """"",PASSED,
+,"передаем NULL
+""login"": NULL",PASSED,
+,"HTTP/1.1 409 Сonflict
+{
+  ""message"": ""Этот логин уже используется""
+}",,
+,"предаем уже существующий login
+""login"": ""maxim"" (уже есть в базе)",PASSED,
+"Создание курьера: POST /api/v1/courier
+
+    ""login"": ""maxim"",
+    ""password"": ""1234"",
+    ""firstName"": ""Maxim""",Проверка вводимых данных в поле password:,,
+,201 created:,,
+,"ввести цифры, (длина 4) и отправить запрос с валидным логином(maxim) и именем(Maxim)
+""password"": ""1234""",PASSED,
+,"проверить, создание курьера в базе данных в таблице Couriers
+maxim",PASSED,
+,400 Bad Request:,,
+,"ввести кириллические буквы
+""password"": ""цы12""",FAILED,BUG3.1.10
+,"ввести английские буквы
+""password"": ""qw12""",FAILED,BUG3.1.11
+,"ввести пробел
+""password"": ""12 4""",FAILED,BUG3.1.12
+,"ввести спецсимволы
+""password"": ""123!""",FAILED,BUG3.1.13
+,"ввести цифры
+""password"": 1234",FAILED,BUG3.1.14
+,"проверить по длине: 1, 2, 3, 5, 6, 10
+""password"": ""1""
+""password"": ""12""
+""password"": ""123""
+""password"": ""12345""
+""password"": ""123456""
+""password"": ""1234567890""","FAILED
+FAILED
+FAILED
+FAILED
+FAILED
+FAILED","BUG3.1.15
+BUG3.1.16
+BUG3.1.17
+BUG3.1.18
+BUG3.1.19
+BUG3.1.20"
+,"HTTP/1.1 400 Bad Request
+{
+  ""message"": ""Недостаточно данных для создания учетной записи""
+}",,
+,непередаем параметр Password,PASSED,
+,"оставить пустым
+""password"": """"",PASSED,
+,"передаем NULL
+""password"": NULL",PASSED,
+"Создание курьера: POST /api/v1/courier
+
+    ""login"": ""maxim"",
+    ""password"": ""1234"",
+    ""firstName"": ""Maxim""",Проверка вводимых данных в поле firstName:,,
+,201 created:,,
+,"ввести латинские буквы, кириллические буквы заглавные буквы, (длины 2, 3, 5, 9, 10) и отправить запрос с валидным паролем(1234) и логином(maxim)
+""firstName"": ""Ma""
+""firstName"": ""Max""
+""firstName"": ""Maxim""
+""firstName"": ""maxim""
+""firstName"": ""Maximmmmm""
+""firstName"": ""Maximmmmmm""","PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED",
+,"проверить, создание курьера в базе данных в таблице Couriers с именем:
+Ma
+Max
+Maxim
+maxim
+Maximmmmm
+Maximmmmmm","PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED",
+,"ввести кириллические буквы
+""firstName"": ""Максим""",PASSED,
+,"проверить, создание курьера в базе данных в таблице Couriers  именем:
+Максим",PASSED,
+,"оставить пустым
+""firstName"": """"",PASSED,
+,"проверить, создание курьера в базе данных в таблице Couriers без имени",PASSED,
+,"передаем NULL
+""firstName"": NULL",PASSED,
+,"проверить, создание курьера в базе данных в таблице Couriers без имени",PASSED,
+,непередаем параметр firstName,PASSED,
+,"проверить, создание курьера в базе данных в таблице Couriers без имени",PASSED,
+,400 Bad Request:,,
+,"ввести спецсимволы
+""firstName"": ""Maxim!""",FAILED,BUG3.1.21
+,"ввести цифры
+""firstName"": ""Maxim1""
+""firstName"": 1","FAILED
+FAILED","BUG3.1.22
+BUG3.1.23"
+,"ввести пробел
+""firstName"": ""Max m""",FAILED,BUG3.1.24
+,"проверить по длине: 1, 11, 12, 15, 
+""firstName"": ""m""
+""firstName"": ""maximmmmmmm""
+""firstName"": ""maximmmmmmmm""
+""firstName"": ""maximmmmmmmmmmm""","FAILED
+FAILED
+FAILED
+FAILED","BUG3.1.25
+BUG3.1.26
+BUG3.1.27
+BUG3.1.28"
+"удаление курьера: delete /api/v1/courier/:id
+
+    ",проверить удаление курьера и всех связанных заказов,,
+,"HTTP/1.1 200 OK
+{
+    ok: true
+}",,
+,удалить существующего курьера,PASSED,
+,"проверить, удаление курьера в базе данных в таблице Couriers ",PASSED,
+,"проверить, удаление связанных заказов в базе данных в таблице orders",FAILED,BUG3.1.29
+,"HTTP/1.1 400 Bad Request
+{
+  ""message"":  ""Недостаточно данных для удаления курьера""
+}",,
+,проверить запрос без id курьера,FAILED,BUG3.1.30
+,"HTTP/1.1 404 Not Found
+{
+  ""message"": ""Курьера с таким id нет""
+}",,
+,проверить запрос с несуществущим id курьера,PASSED,
+"Получить заказ по его номеру
+GET /api/v1/orders/track
+
+    ",проверить данные о заказе по его номеру отслеживания,,
+,"HTTP/1.1 200 OK
+{
+    // данные о заказе
+}",,
+,"проверить что заказ найден, данные получены",PASSED,
+,проверить правильность синтаксиса ответа,FAILED,BUG3.1.31
+,проверить что полученные данные соответствуют данным из заказа,PASSED,
+,"HTTP/1.1 400 Bad Request
+{
+  ""message"":  ""Недостаточно данных для поиска""
+}",,
+,проверить запрос без номера заказа,PASSED,
+,"HTTP/1.1 404 Not Found
+{
+  ""message"": ""Заказ не найден""
+}",,
+,проверить запрос с несуществущим номером заказа,PASSED,
