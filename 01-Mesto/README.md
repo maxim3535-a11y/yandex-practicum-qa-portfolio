@@ -69,11 +69,15 @@ These figures reflect the statuses recorded in the supplied workbooks. They are 
 
 The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion.
 
-### Improved Excel workbooks
+### Improved workbooks and browser previews
 
-- [Profile regression test cases](./Improved/Mesto-Test-Cases-IMPROVED.xlsx)
-- [Bug reports](./Improved/Mesto-Bug-Reports-IMPROVED.xlsx)
-- [Retest results](./Improved/Mesto-Retest-Results-IMPROVED.xlsx)
+GitHub does not display .xlsx workbooks as interactive tables in its file viewer. The Excel links download the workbooks; the CSV preview links open as readable tables directly on GitHub.
+
+| Artifact | Excel workbook | Browser preview |
+|---|---|---|
+| Profile regression test cases | [Download XLSX](./Improved/Mesto-Test-Cases-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Test-Cases-IMPROVED-DATA.csv) |
+| Bug reports | [Download XLSX](./Improved/Mesto-Bug-Reports-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Bug-Reports-IMPROVED-DATA.csv) |
+| Retest results | [Download XLSX](./Improved/Mesto-Retest-Results-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Retest-Results-IMPROVED-DATA.csv) |
 
 The original worksheets are also available as CSV data exports in [Originals/CSV-Exports](./Originals/CSV-Exports/). CSV preserves worksheet cell values and text, but not Excel formatting, formulas, charts, or workbook-level features. The improved `.xlsx` files above are the review-ready Excel versions prepared for this portfolio.
 
