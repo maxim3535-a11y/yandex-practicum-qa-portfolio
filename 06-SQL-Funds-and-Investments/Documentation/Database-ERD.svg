@@ -8,22 +8,22 @@
 .rule{stroke:#222;stroke-width:1}
 .green-rule{stroke:#00b34a;stroke-width:2}
 </style>
-<polyline points="383,144.5 423,144.5 423,158.5 468,158.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoinn="round"/>
-<polyline points="456,151.5 468,158.5 456,165.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin-linejoin="round"/>
+<polyline points="383,144.5 423,144.5 423,158.5 468,158.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="456,151.5 468,158.5 456,165.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="383,175.5 403,175.5 403,171.5 468,171.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
-<polyline points="456,164.5 468,171.5 456,178.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin-linejoin" stroke-linejoin="round"/>
-<polyline points="355,843.5 435,843.5 435,164.5 468,164.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing="round"/>
+<polyline points="456,164.5 468,171.5 456,178.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="355,843.5 435,843.5 435,164.5 468,164.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="456,157.5 468,164.5 456,171.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
-<polyline points="105,480.5 61,480.5 61,750.5 105,750.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing"/>
+<polyline points="105,480.5 61,480.5 61,750.5 105,750.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="93,743.5 105,750.5 93,757.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
-<polyline points="796,493.5 752,493.5 752,167.5 723,167.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing="round"/>
-<polyline points="735,160.5 723,167.5 735,174.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin-linejoin" stroke-linejoin="round"/>
-<polyline points="796,216.5 754,216.5 754,462.5 796,462.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoing="round"/>
+<polyline points="796,493.5 752,493.5 752,167.5 723,167.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="735,160.5 723,167.5 735,174.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="796,216.5 754,216.5 754,462.5 796,462.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="784,455.5 796,462.5 784,469.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="796,247.5 742,247.5 742,164.5 723,164.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="735,157.5 723,164.5 735,171.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="1036,278.5 1115,283.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
-<polyline points="1103,276.5 1115,283.5 1103,290.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin" line-join="round"/>
+<polyline points="1103,276.5 1115,283.5 1103,290.5" fill="none" stroke="#00b34a" stroke-width="2" stroke-linejoin="round"/>
 <rect class="box" x="105" y="60" width="278" height="286"/>
 <line class="green-rule" x1="105" y1="98" x2="383" y2="98"/>
 <text class="table-name" x="244.0" y="86" text-anchor="middle">acquisition</text>
