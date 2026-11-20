@@ -1,21 +1,21 @@
-# Test Environment — Yandex Routes
+# Тестовое окружение — Яндекс Маршруты
 
-| Parameter | Recorded value |
+| Параметр | Зафиксированное значение |
 |---|---|
-| Application | Yandex Routes training web application |
-| Test stand | https://qa-routes.praktikum-services.ru/ |
-| Testing approach | Manual testing |
-| Browser in test-case records | Google Chrome 141.0.7390.5–141.0.7390.26; 20 distinct patch versions occur |
-| Browser in bug-report records | Google Chrome 141.0.7390.14 |
+| Приложение | Учебное веб-приложение Яндекс Маршруты |
+| Тестовый стенд | https://qa-routes.praktikum-services.ru/ |
+| Подход к тестированию | Ручное тестирование |
+| Браузер в записях тест-кейсов | Google Chrome 141.0.7390.5–141.0.7390.26; встречается 20 различных патч-версий |
+| Браузер в записях баг-репортов | Google Chrome 141.0.7390.14 |
 
-The source test-case workbook records multiple Chrome patch versions rather than one fixed browser build. This variation is retained as recorded and should be considered when reproducing defects.
+В исходной книге тест-кейсов зафиксировано несколько патч-версий Chrome, а не одна неизменная сборка браузера. Эта особенность сохранена в описании и должна учитываться при воспроизведении дефектов.
 
-The source materials do not specify the operating system, viewport/screen resolution, browser configuration, installed extensions, or application build/version. These values are intentionally left unspecified.
+В исходных материалах не указаны операционная система, размер области просмотра/разрешение экрана, конфигурация браузера, установленные расширения и версия сборки приложения. Эти сведения намеренно не добавлялись.
 
-## Tested scope
+## Проверенная область
 
-- Validation of hours and minutes in the departure-time fields
-- Validation of the “From” and “To” address fields
-- Automatic insertion of leading zeroes for one-digit time values
-- Trimming whitespace around addresses on blur
-- Private-car route time and cost calculation using the supplied road-distance matrix and time-dependent average speed
+- Валидация часов и минут в полях времени отправления
+- Валидация полей адресов «Откуда» и «Куда»
+- Автоматическая вставка ведущего нуля для однозначных значений времени
+- Удаление пробелов в начале и конце адреса при потере фокуса
+- Расчёт времени и стоимости поездки на личном автомобиле по предоставленной матрице дорожных расстояний и средней скорости, зависящей от времени отправления

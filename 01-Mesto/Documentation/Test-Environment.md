@@ -1,52 +1,52 @@
-# Test Environment — Mesto
+# Тестовое окружение — Mesto
 
-## Application
+## Приложение
 
-| Parameter | Recorded value |
+| Параметр | Зафиксированное значение |
 |---|---|
-| Application | Mesto web application |
-| Purpose represented in the test materials | User profile management and a gallery of place cards |
-| Test stand | https://code.s3.yandex.net/qa/files/mesto/index.html |
-| Requirements | https://praktikum.notion.site/Mesto-9f2cfaa209734d1f8cfa0c0db3d3049f |
-| Browser | Google Chrome 140.0.7339.128 |
-| Testing approach | Manual testing |
+| Приложение | Веб-приложение Mesto |
+| Назначение, отражённое в тестовых материалах | Управление профилем пользователя и галереей карточек мест |
+| Тестовый стенд | https://code.s3.yandex.net/qa/files/mesto/index.html |
+| Требования | https://praktikum.notion.site/Mesto-9f2cfaa209734d1f8cfa0c0db3d3049f |
+| Браузер | Google Chrome 140.0.7339.128 |
+| Подход к тестированию | Ручное тестирование |
 
-## Tested areas represented in the workbooks
+## Области тестирования, представленные в книгах
 
-### Profile management — regression test cases
+### Управление профилем — регрессионные тест-кейсы
 
-The 17 test cases in the regression workbook cover:
-- Opening and closing the profile-editing form
-- Displaying the current profile name and occupation in the form
-- Saving updated name and occupation
-- Minimum and maximum field-length validation
-- Save button behavior for valid, invalid, and empty fields
-- Trimming whitespace on save
-- Form positioning on the page
+17 тест-кейсов в регрессионной книге охватывают:
+- Открытие и закрытие формы редактирования профиля
+- Отображение текущих имени и информации о занятии в форме
+- Сохранение изменённых имени и информации о занятии
+- Проверку минимальной и максимальной длины значений в полях
+- Поведение кнопки сохранения при корректных, некорректных и пустых значениях
+- Удаление пробелов при сохранении
+- Расположение формы на странице
 
-Recorded results: 7 Passed, 7 Failed, 3 Blocked.
+Зафиксированные результаты: 7 пройдено, 7 не пройдено, 3 заблокировано.
 
-### Retest log — profile and places gallery
+### Журнал ретестирования — профиль и галерея мест
 
-The separate retest workbook contains 15 records with IDs Б1–Б15 and covers both profile and gallery behavior. It is not a one-to-one continuation of the 10 profile-focused bug reports (ID_1–ID_10).
+В отдельной книге ретестирования содержится 15 записей с ID Б1–Б15. Они охватывают как поведение профиля, так и галереи. Этот журнал не является прямым продолжением 10 баг-репортов по профилю с ID ID_1–ID_10: идентификаторы в двух книгах не сопоставляются один к одному.
 
-The bug-report workbook contains profile-related issues only. The retest log includes:
-- Profile data display and update
-- Profile form validation and Save button behavior
-- Opening and closing the profile-editing form
-- Place photo display and place description
-- Likes and deletion of place cards
-- Adding photos/cards
-- Gallery scrolling
+Книга с баг-репортами содержит только проблемы, связанные с профилем. Журнал ретестирования включает:
+- Отображение и обновление данных профиля
+- Валидацию формы профиля и поведение кнопки сохранения
+- Открытие и закрытие формы редактирования профиля
+- Отображение фотографии места и его описания
+- Установку отметок «Нравится» и удаление карточек мест
+- Добавление фотографий/карточек
+- Прокрутку галереи
 
-The retest workbook contains 15 records: 10 Closed, 2 Reopened, and 3 Skipped.
+В книге ретестирования 15 записей: 10 закрыто, 2 переоткрыто и 3 пропущено.
 
-## Environment limitations
+## Ограничения сведений об окружении
 
-The source workbooks record the test stand URL and browser version. They do not specify:
-- Operating system
-- Viewport or screen resolution
-- Browser configuration or installed extensions
-- Application build/version
+В исходных книгах зафиксированы URL тестового стенда и версия браузера. При этом не указаны:
+- Операционная система
+- Размер области просмотра или разрешение экрана
+- Конфигурация браузера и установленные расширения
+- Версия сборки приложения
 
-These values are intentionally left unspecified rather than inferred.
+Эти значения намеренно не указаны, поскольку их нельзя достоверно определить по исходным материалам.
