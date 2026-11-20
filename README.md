@@ -10,7 +10,7 @@ I have 8 years of previous IT experience in system administration and technical 
 
 | # | Project | Scope | Documentation |
 |---|---|---|---|
-| 01 | **Mesto Web Application** | Profile management, places gallery, bug reporting and retesting | [Open project](./01-Mesto/README.md) |
+| 01 | **Mesto Web Application** | Profile-editing regression suite, defect reporting and retesting across profile and gallery features | [Open project](./01-Mesto/README.md) |
 
 ## Skills represented
 
