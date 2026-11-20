@@ -4,7 +4,7 @@
 |---|---|
 | Продукт | API Яндекс.Прилавка |
 | Инструмент | Postman |
-| Версия Postman | В исходном отчёте указана как актуальная, номер версии не зафиксирован |
+| Версия Postman | номер версии не зафиксирован |
 | Тестовый стенд | `https://{id}.serverhub.praktikum-services.ru/` |
 | Документация API | `https://{id}.serverhub.praktikum-services.ru/docs/` |
 
