@@ -14,12 +14,12 @@ The source workbook originally contained four worksheets. They were separated in
 - **Test cases:** 60 executed test cases.
 - **Bug reports:** 16 recorded defects.
 
-The four separated Excel workbooks and the original source workbook are available in the project package. Two improved Excel files are now also stored directly in this repository; the other two improved workbooks and the original source workbook remain in the package while their direct binary uploads are completed. CSV previews are provided below for browser viewing.
+All four improved Excel workbooks and the original multi-sheet source workbook are committed directly to this repository. CSV previews are also provided for browser viewing.
 
 ## Application and test environment
 
 - **Test stand:** [Yandex Routes](https://qa-routes.praktikum-services.ru/)
-- **Requirements:** original requirements document, included in the source-materials archive
+- **Requirements:** original requirements document, preserved in the source-materials archive; see [Originals](./Originals/README.md)
 - **Testing approach:** manual testing
 - **Browser recorded in test cases:** Google Chrome 141.0.7390.5–141.0.7390.26 (20 distinct patch versions occur in the source records)
 - **Browser recorded in bug reports:** Google Chrome 141.0.7390.14
@@ -63,15 +63,15 @@ The recorded results are retained from the source workbook. They are not a claim
 
 | Workbook | Download |
 |---|---|
+| Test analysis | [XLSX](./Improved/Test-Analysis.xlsx) |
 | Equivalence classes and boundary values | [XLSX](./Improved/Equivalence-Classes-Boundary-Values.xlsx) |
+| Test cases | [XLSX](./Improved/Test-Cases.xlsx) |
 | Bug reports | [XLSX](./Improved/Bug-Reports.xlsx) |
-| Test analysis | Included in the project package; direct repository upload pending |
-| Test cases | Included in the project package; direct repository upload pending |
-| Original multi-sheet workbook | Included in the project package; direct repository upload pending |
+| Original multi-sheet workbook | [Original XLSX](./Originals/Yandex-Routes-Source-Workbook-Original.xlsx) |
 
 ## CSV browser previews
 
-The CSV previews show the worksheet data directly in GitHub. The test-case index is a compact view with IDs, titles, execution statuses, and linked bug IDs; the full test steps and expected results are in the Excel workbook in the project package.
+The CSV previews show the worksheet data directly in GitHub. The test-case index is a compact view with IDs, titles, execution statuses, and linked bug IDs; the full test steps and expected results are in the Excel workbook.
 
 | Artifact | Browser preview |
 |---|---|
@@ -84,9 +84,9 @@ The CSV previews show the worksheet data directly in GitHub. The test-case index
 
 See [Test Analysis Notes](./Documentation/Test-Analysis-Notes.md) for scope limitations, gray areas, and source-level inconsistencies that should be clarified with an expert before treating them as definitive expected behavior.
 
-## Source materials and Excel workbooks
+## Source materials
 
-The original multi-sheet workbook and requirements document are preserved in the downloadable project package. See [Originals](./Originals/README.md) and [Improved](./Improved/README.md) for the file inventory and current repository download status.
+The original multi-sheet workbook is committed in [Originals](./Originals/). The original requirements document is preserved in the source-materials archive; see [Originals README](./Originals/README.md) for the inventory.
 
 ## Skills demonstrated
 
