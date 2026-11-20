@@ -63,7 +63,7 @@ These figures reflect the statuses recorded in the supplied workbooks. They are 
 
 | Folder | Contents |
 |---|---|
-| [Originals](./Originals/) | CSV exports of the original training worksheets; values and source text are retained, Excel formatting is not |
+| [Originals](./Originals/) | Original submitted Excel workbooks plus CSV exports for browser viewing |
 | [Improved](./Improved/) | Reorganized Excel workbooks with consistent column names and a more readable tabular structure |
 | [Documentation](./Documentation/) | Test-environment notes and scope details |
 
@@ -79,7 +79,7 @@ GitHub does not display .xlsx workbooks as interactive tables in its file viewer
 | Bug reports | [Download XLSX](./Improved/Mesto-Bug-Reports-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Bug-Reports-IMPROVED-DATA.csv) |
 | Retest results | [Download XLSX](./Improved/Mesto-Retest-Results-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Retest-Results-IMPROVED-DATA.csv) |
 
-The original worksheets are also available as CSV data exports in [Originals/CSV-Exports](./Originals/CSV-Exports/). CSV preserves worksheet cell values and text, but not Excel formatting, formulas, charts, or workbook-level features. The improved `.xlsx` files above are the review-ready Excel versions prepared for this portfolio.
+The original submitted Excel workbooks are available in [Originals](./Originals/). CSV exports of those worksheets are in [Originals/CSV-Exports](./Originals/CSV-Exports/) for browser viewing. CSV preserves worksheet cell values and text, but not Excel formatting, formulas, charts, or workbook-level features. The improved `.xlsx` files above are the reorganized Excel versions prepared for this portfolio.
 
 The spreadsheets are in Russian because the original training assignment and source materials were in Russian. This project overview is in English.
 
