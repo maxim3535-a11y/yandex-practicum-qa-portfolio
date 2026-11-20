@@ -63,22 +63,22 @@ The recorded results are retained from the source workbook. They are not a claim
 
 | Workbook | Download |
 |---|---|
-| Test analysis | [XLSX](./Improved/Test-Analysis.xlsx) |
-| Equivalence classes and boundary values | [XLSX](./Improved/Equivalence-Classes-Boundary-Values.xlsx) |
-| Test cases | [XLSX](./Improved/Test-Cases.xlsx) |
-| Bug reports | [XLSX](./Improved/Bug-Reports.xlsx) |
-| Original multi-sheet workbook | [Original XLSX](./Originals/Yandex-Routes-Source-Workbook-Original.xlsx) |
+| Test analysis | [XLSX](./Improved/Excel/Test-Analysis.xlsx) |
+| Equivalence classes and boundary values | [XLSX](./Improved/Excel/Equivalence-Classes-Boundary-Values.xlsx) |
+| Test cases | [XLSX](./Improved/Excel/Test-Cases.xlsx) |
+| Bug reports | [XLSX](./Improved/Excel/Bug-Reports.xlsx) |
+| Original multi-sheet workbook | [Original XLSX](./Originals/Excel/Yandex-Routes-Source-Workbook-Original.xlsx) |
 
 ## CSV browser previews
 
-The CSV previews show the worksheet data directly in GitHub. The test-case index is a compact view with IDs, titles, execution statuses, and linked bug IDs; the full test steps and expected results are in the Excel workbook.
+The CSV previews are placed directly in the Improved folder, so recruiters can open the tables in GitHub without downloading Excel files. The downloadable Excel workbooks are grouped in [Improved/Excel](./Improved/Excel/). The test-case index is a compact view with IDs, titles, execution statuses, and linked bug IDs; the full test steps and expected results are in the Excel workbook.
 
 | Artifact | Browser preview |
 |---|---|
-| Test analysis | [View CSV](./Improved/CSV-Preview/Test-Analysis.csv) |
-| Equivalence classes and boundary values | [View CSV](./Improved/CSV-Preview/Equivalence-Classes-Boundary-Values.csv) |
-| Test-case index | [View CSV](./Improved/CSV-Preview/Test-Cases-Index.csv) |
-| Bug reports | [View CSV](./Improved/CSV-Preview/Bug-Reports.csv) |
+| Test analysis | [View CSV](./Improved/Test-Analysis.csv) |
+| Equivalence classes and boundary values | [View CSV](./Improved/Equivalence-Classes-Boundary-Values.csv) |
+| Test-case index | [View CSV](./Improved/Test-Cases-Index.csv) |
+| Bug reports | [View CSV](./Improved/Bug-Reports.csv) |
 
 ## Review notes
 

@@ -33,8 +33,11 @@ yandex-practicum-qa-portfolio/
     ├── README.md
     ├── Documentation/
     ├── Originals/
+    │   ├── *.csv                 # original data previews
+    │   └── Excel/*.xlsx          # original Excel workbooks
     └── Improved/
-        └── CSV-Preview/
+        ├── *.csv                 # recruiter-friendly browser previews
+        └── Excel/*.xlsx          # downloadable improved workbooks
 ```
 
 More projects will be added as their documentation is prepared.

@@ -63,8 +63,8 @@ These figures reflect the statuses recorded in the supplied workbooks. They are 
 
 | Folder | Contents |
 |---|---|
-| [Originals](./Originals/) | Original submitted Excel workbooks plus CSV exports for browser viewing |
-| [Improved](./Improved/) | Reorganized Excel workbooks with consistent column names and a more readable tabular structure |
+| [Originals](./Originals/) | CSV exports for browser viewing; original Excel workbooks in [Excel](./Originals/Excel/) |
+| [Improved](./Improved/) | CSV previews visible directly in the folder; downloadable Excel workbooks in [Excel](./Improved/Excel/) |
 | [Documentation](./Documentation/) | Test-environment notes and scope details |
 
 The improved retest workbook separates the originally recorded observed result from the later retest note, so the initial defect description is not confused with the retest conclusion. The updated bug-report CSV preview preserves the screenshot filename references from the source workbook for ID_2, ID_3, ID_5, and ID_8. The screenshot image files themselves were not included in the supplied materials.
@@ -75,11 +75,11 @@ GitHub does not display .xlsx workbooks as interactive tables in its file viewer
 
 | Artifact | Excel workbook | Browser preview |
 |---|---|---|
-| Profile regression test cases | [Download XLSX](./Improved/Mesto-Test-Cases-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Test-Cases-IMPROVED-DATA.csv) |
-| Bug reports | [Download XLSX](./Improved/Mesto-Bug-Reports-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Bug-Reports-IMPROVED-DATA.csv) |
-| Retest results | [Download XLSX](./Improved/Mesto-Retest-Results-IMPROVED.xlsx) | [View CSV](./Improved/CSV-Preview/Mesto-Retest-Results-IMPROVED-DATA.csv) |
+| Profile regression test cases | [Download XLSX](./Improved/Excel/Mesto-Test-Cases-IMPROVED.xlsx) | [View CSV](./Improved/Mesto-Test-Cases-IMPROVED-DATA.csv) |
+| Bug reports | [Download XLSX](./Improved/Excel/Mesto-Bug-Reports-IMPROVED.xlsx) | [View CSV](./Improved/Mesto-Bug-Reports-IMPROVED-DATA.csv) |
+| Retest results | [Download XLSX](./Improved/Excel/Mesto-Retest-Results-IMPROVED.xlsx) | [View CSV](./Improved/Mesto-Retest-Results-IMPROVED-DATA.csv) |
 
-The original submitted Excel workbooks are available in [Originals](./Originals/). CSV exports of those worksheets are in [Originals/CSV-Exports](./Originals/CSV-Exports/) for browser viewing. CSV preserves worksheet cell values and text, but not Excel formatting, formulas, charts, or workbook-level features. The improved `.xlsx` files above are the reorganized Excel versions prepared for this portfolio.
+The original submitted Excel workbooks are available in [Originals](./Originals/). CSV exports of those worksheets are directly in [Originals](./Originals/) for browser viewing; the original Excel files are grouped in [Originals/Excel](./Originals/Excel/). CSV preserves worksheet cell values and text, but not Excel formatting, formulas, charts, or workbook-level features. The improved `.xlsx` files above are the reorganized Excel versions prepared for this portfolio.
 
 The spreadsheets are in Russian because the original training assignment and source materials were in Russian. This project overview is in English.
 
